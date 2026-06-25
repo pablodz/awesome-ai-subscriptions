@@ -16,10 +16,60 @@ def load_data() -> list:
     return data["subscriptions"]
 
 
-TABLE_HEADER_EN = "| # | Company / Product | Plan | Price/mo | Coding Models | Context Window | Rate Limits & Window | Usage Control |"
-TABLE_SEPARATOR = "|---|-------------------|------|----------|---------------|----------------|----------------------|---------------|"
+def fmt_price(entry: dict) -> str:
+    if entry["price_monthly"] == 0:
+        return "Free"
+    if entry["price_annual"]:
+        return f"${entry['price_monthly']}/mo<br>(${entry['price_annual']}/yr)"
+    return f"${entry['price_monthly']}/mo"
 
-TABLE_HEADER_ES = "| # | Empresa / Producto | Plan | Precio/mes | Modelos de Código | Ventana de Contexto | Límites y Ventana | Control de Uso |"
+
+def fmt_models(entry: dict) -> str:
+    lines = []
+    for m in entry["models"]:
+        line = m["name"]
+        if "context" in m and m["context"]:
+            line += f" · {m['context']}"
+        if "note" in m and m["note"]:
+            line += f" *({m['note']})*"
+        lines.append(line)
+    return "<br>".join(lines)
+
+
+def fmt_price_val(v: float) -> str:
+    """Format a dollar price, using more decimals if under $0.10."""
+    if v < 0.10:
+        return f"${v:.4f}".rstrip("0").rstrip(".")
+    return f"${v:.2f}"
+
+
+def fmt_pricing(entry: dict) -> str:
+    """Format per-token pricing for models that have it."""
+    lines = []
+    for m in entry["models"]:
+        has_pricing = any(k in m for k in ("input_price", "output_price", "cache_price"))
+        if not has_pricing:
+            continue
+        parts = [m["name"]]
+        prices = []
+        if "input_price" in m:
+            prices.append(f"in {fmt_price_val(m['input_price'])}")
+        if "cache_price" in m:
+            prices.append(f"cache {fmt_price_val(m['cache_price'])}")
+        if "output_price" in m:
+            prices.append(f"out {fmt_price_val(m['output_price'])}")
+        if prices:
+            parts.append(" · ".join(prices))
+        lines.append(" · ".join(parts))
+    if not lines:
+        return "included in plan"
+    return "<br>".join(lines)
+
+
+TABLE_HEADER_EN = "| # | Company / Product | Plan | Price/mo | Models & Context | Token Pricing ($/1M) |"
+TABLE_SEPARATOR = "|---|-------------------|------|----------|------------------|---------------------|"
+
+TABLE_HEADER_ES = "| # | Empresa / Producto | Plan | Precio/mes | Modelos y Contexto | Precio por Token ($/1M) |"
 
 
 def build_rows(entries: list, lang: str) -> list:
@@ -27,18 +77,11 @@ def build_rows(entries: list, lang: str) -> list:
     for i, e in enumerate(entries, 1):
         company_product = f"**{e['company']}**<br>{e['product']}"
         plan = e["plan"]
-        if e["price_monthly"] == 0:
-            price = "Free"
-        elif e["price_annual"]:
-            price = f"${e['price_monthly']}/mo<br>(${e['price_annual']}/yr)"
-        else:
-            price = f"${e['price_monthly']}/mo"
-        models = "<br>".join(e["models"])
-        ctx = e["token_context"]
-        limits = f"{e['rate_limit']}<br><br>*{e['rate_window']}*"
-        control = e["usage_control"]
+        price = fmt_price(e)
+        models = fmt_models(e)
+        pricing = fmt_pricing(e)
 
-        row = f"| {i} | {company_product} | {plan} | {price} | {models} | {ctx} | {limits} | {control} |"
+        row = f"| {i} | {company_product} | {plan} | {price} | {models} | {pricing} |"
         rows.append(row)
     return rows
 
@@ -51,12 +94,12 @@ TABLE_HEADERS = {
 TEMPLATES = {
     "en": """# 💰 awesome-ai-subscriptions
 
-> AI coding subscriptions compared — plans, models, rate limits, and pricing at a glance.
+> AI coding subscriptions compared — plans, models, context windows, and per-token pricing.
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: CC0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
-A curated list of **AI coding subscription plans** from major providers. Compare pricing, supported models, rate limits, context windows, and usage control mechanisms across ChatGPT, Claude, Copilot, Cursor, Gemini Code Assist, Amazon Q, Command Code, Z.ai, Xiaomi MiMo, and more.
+A curated list of **AI coding subscription plans** from major providers. Compare pricing, supported models, context windows, and per-token costs across ChatGPT, Claude, Copilot, Cursor, Gemini Code Assist, Amazon Q, Command Code, Z.ai, Windsurf, Xiaomi MiMo, and more.
 
 📖 [Versión en español →](README.es.md)
 
@@ -64,7 +107,7 @@ A curated list of **AI coding subscription plans** from major providers. Compare
 
 ## 📊 The List
 
-> Ordered by price ascending within each company. Updated automatically.
+> Ordered by provider. Updated automatically on every push to main.
 
 {stars_table}
 
@@ -81,18 +124,18 @@ Want to contribute? Add your entry to [`data/subscriptions.json`](data/subscript
   "plan": "Plan Name",
   "price_monthly": 20,
   "price_annual": null,
-  "models": ["Model A", "Model B"],
-  "token_context": "128K",
-  "rate_limit": "80 msgs/3h",
-  "rate_window": "3h rolling",
-  "usage_control": "Message-based rate limits",
+  "models": [
+    {{ "name": "Model A", "context": "200K", "input_price": 3.00, "output_price": 15.00 }},
+    {{ "name": "Model B", "context": "128K" }}
+  ],
   "coding_features": ["Feature 1", "Feature 2"],
   "url": "https://example.com",
   "notes": "Optional notes"
 }}
 ```
 
-**The table is auto-generated** — no need to edit README.md directly.
+- `input_price` / `output_price` / `cache_price` are **per 1M tokens** in USD. Omit for subscription plans where per-token pricing isn't exposed (the column will show "included in plan").
+- Only include models from the current generation (last ~year). Skip deprecated/legacy models.
 
 See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
 
@@ -102,33 +145,24 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
 
 | Column | Description |
 |--------|-------------|
-| **Coding Models** | AI models available for code generation, editing, and reasoning in each plan |
-| **Context Window** | Theoretical maximum tokens (input) the model can process in one request |
-| **Rate Limits & Window** | Practical usage caps (messages, requests, credits, prompts) and the time window they reset |
-| **Usage Control** | How the provider meters and limits usage (credits, messages, tokens, prompts) |
+| **Models & Context** | Current-gen coding models and their context window (max input tokens). Notes in *italics*. |
+| **Token Pricing ($/1M)** | Per-token cost at API rates: input / cache read / output per 1M tokens. Shows "included in plan" for subscription-only plans. |
 
 ---
 
-## 🏷️ Key Concepts
+## 🏷️ Pricing Notes
 
-### Rate Limit Windows
-- **3h / 5h rolling**: Limit resets continuously over a sliding window (e.g., "80 messages in the last 3 hours")
-- **Daily**: Resets at midnight or 24h after first request
-- **Weekly**: Resets every 7 days from first use
-- **Monthly**: Resets on the 1st of each month or billing date
-
-### Usage Control Mechanisms
-- **Message-based**: Counts each conversation turn (ChatGPT, Claude)
-- **Request-based**: Counts each model invocation (Copilot premium requests, Amazon Q)
-- **Credit-based**: Dollar-denominated pool consumed at API rates (Command Code, Cursor)
-- **Prompt-based**: Counts high-level prompts, each ~15-20 model calls (Z.ai)
-- **Token-based**: Direct per-token billing (API plans, Enterprise)
+- **Subscription plans** (ChatGPT Plus/Pro, Claude Pro/Max, Copilot, Cursor) include model access in the monthly fee. Per-token pricing shown is the underlying API rate where applicable.
+- **Credit-based plans** (Command Code) charge per token at model-specific rates, drawn from a monthly credit pool. Deals (e.g., "4× usage") mean every $1 of credit goes 4× further on that model.
+- **Prompt-based plans** (Z.ai) meter by prompt count, not tokens. Per-token rates are reference API prices.
+- **API-only** (Xiaomi MiMo) charge per token with no subscription, or offer open-weight models for free self-hosting.
+- Prices are in USD. Verify on official pricing pages — rates change frequently.
 
 ---
 
 ## 🤖 Automation
 
-The README is generated from [`data/subscriptions.json`](data/subscriptions.json) via [`scripts/generate_readme.py`](scripts/generate_readme.py) and auto-committed by a [GitHub Action](.github/workflows/update-readme.yml).
+The README is generated from [`data/subscriptions.json`](data/subscriptions.json) via [`scripts/generate_readme.py`](scripts/generate_readme.py) and auto-committed on push to main by a [GitHub Action](.github/workflows/update-readme.yml).
 
 ---
 
@@ -147,12 +181,12 @@ Curated with ❤️ by the open-source community. Inspired by the [awesome](http
 """,
     "es": """# 💰 awesome-ai-subscriptions
 
-> Suscripciones de IA para programar comparadas — planes, modelos, límites y precios de un vistazo.
+> Suscripciones de IA para programar comparadas — planes, modelos, ventanas de contexto y precio por token.
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: CC0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
-Una lista curada de **planes de suscripción de IA para programar** de los principales proveedores. Compara precios, modelos soportados, límites de uso, ventanas de contexto y mecanismos de control entre ChatGPT, Claude, Copilot, Cursor, Gemini Code Assist, Amazon Q, Command Code, Z.ai, Xiaomi MiMo y más.
+Una lista curada de **planes de suscripción de IA para programar** de los principales proveedores. Compara precios, modelos soportados, ventanas de contexto y costos por token entre ChatGPT, Claude, Copilot, Cursor, Gemini Code Assist, Amazon Q, Command Code, Z.ai, Windsurf, Xiaomi MiMo y más.
 
 📖 [English version →](README.md)
 
@@ -160,7 +194,7 @@ Una lista curada de **planes de suscripción de IA para programar** de los princ
 
 ## 📊 La Lista
 
-> Ordenada por precio ascendente dentro de cada empresa. Actualizada automáticamente.
+> Ordenada por proveedor. Actualizada automáticamente en cada push a main.
 
 {stars_table}
 
@@ -177,18 +211,18 @@ Una lista curada de **planes de suscripción de IA para programar** de los princ
   "plan": "Nombre Plan",
   "price_monthly": 20,
   "price_annual": null,
-  "models": ["Modelo A", "Modelo B"],
-  "token_context": "128K",
-  "rate_limit": "80 msgs/3h",
-  "rate_window": "Ventana de 3h",
-  "usage_control": "Límites basados en mensajes",
+  "models": [
+    {{ "name": "Modelo A", "context": "200K", "input_price": 3.00, "output_price": 15.00 }},
+    {{ "name": "Modelo B", "context": "128K" }}
+  ],
   "coding_features": ["Función 1", "Función 2"],
   "url": "https://example.com",
   "notes": "Notas opcionales"
 }}
 ```
 
-**La tabla se genera automáticamente** — no es necesario editar README.md directamente.
+- `input_price` / `output_price` / `cache_price` son **por 1M tokens** en USD. Omite para planes de suscripción sin precio por token (la columna mostrará "incluido en el plan").
+- Solo incluye modelos de la generación actual (~último año). Omite modelos obsoletos/legacy.
 
 Consulta [CONTRIBUTING.md](CONTRIBUTING.md) para más detalles.
 
@@ -198,33 +232,24 @@ Consulta [CONTRIBUTING.md](CONTRIBUTING.md) para más detalles.
 
 | Columna | Descripción |
 |---------|-------------|
-| **Modelos de Código** | Modelos de IA disponibles para generar, editar y razonar código en cada plan |
-| **Ventana de Contexto** | Tokens máximos teóricos (entrada) que el modelo puede procesar en una solicitud |
-| **Límites y Ventana** | Límites prácticos de uso (mensajes, solicitudes, créditos, prompts) y la ventana de tiempo en que se reinician |
-| **Control de Uso** | Cómo el proveedor mide y limita el uso (créditos, mensajes, tokens, prompts) |
+| **Modelos y Contexto** | Modelos de código de generación actual y su ventana de contexto (tokens máx. de entrada). Notas en *cursiva*. |
+| **Precio por Token ($/1M)** | Costo por token a tarifas de API: entrada / caché / salida por 1M tokens. Muestra "incluido en el plan" para suscripciones sin precio por token. |
 
 ---
 
-## 🏷️ Conceptos Clave
+## 🏷️ Notas de Precios
 
-### Ventanas de Límite
-- **3h / 5h continuas**: El límite se reinicia continuamente en una ventana deslizante
-- **Diario**: Se reinicia a medianoche o 24h después de la primera solicitud
-- **Semanal**: Se reinicia cada 7 días desde el primer uso
-- **Mensual**: Se reinicia el día 1 de cada mes o en la fecha de facturación
-
-### Mecanismos de Control de Uso
-- **Por mensajes**: Cuenta cada turno de conversación (ChatGPT, Claude)
-- **Por solicitudes**: Cuenta cada invocación al modelo (Copilot, Amazon Q)
-- **Por créditos**: Pool en dólares consumido a tarifas de API (Command Code, Cursor)
-- **Por prompts**: Cuenta prompts de alto nivel, cada uno ≈15-20 llamadas al modelo (Z.ai)
-- **Por tokens**: Facturación directa por token (planes API, Enterprise)
+- **Planes de suscripción** (ChatGPT Plus/Pro, Claude Pro/Max, Copilot, Cursor) incluyen acceso a modelos en la tarifa mensual. El precio por token mostrado es la tarifa API subyacente cuando aplica.
+- **Planes por créditos** (Command Code) cobran por token a tarifas específicas del modelo, consumidas de un pool mensual. Ofertas (ej. "4× uso") significan que cada $1 de crédito rinde 4× más en ese modelo.
+- **Planes por prompts** (Z.ai) miden por cantidad de prompts, no por tokens. Las tarifas por token son precios API de referencia.
+- **Solo API** (Xiaomi MiMo) cobran por token sin suscripción, u ofrecen modelos open-weight para self-hosting gratuito.
+- Precios en USD. Verifica en las páginas oficiales — las tarifas cambian con frecuencia.
 
 ---
 
 ## 🤖 Automatización
 
-El README se genera desde [`data/subscriptions.json`](data/subscriptions.json) mediante [`scripts/generate_readme.py`](scripts/generate_readme.py) y se actualiza automáticamente con un [GitHub Action](.github/workflows/update-readme.yml).
+El README se genera desde [`data/subscriptions.json`](data/subscriptions.json) mediante [`scripts/generate_readme.py`](scripts/generate_readme.py) y se actualiza automáticamente en cada push a main con un [GitHub Action](.github/workflows/update-readme.yml).
 
 ---
 
