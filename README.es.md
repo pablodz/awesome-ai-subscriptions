@@ -1,21 +1,21 @@
 # 💰 awesome-ai-subscriptions
 
-> AI coding subscriptions compared — plans, models, rate limits, and pricing at a glance.
+> Suscripciones de IA para programar comparadas — planes, modelos, límites y precios de un vistazo.
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: CC0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
-A curated list of **AI coding subscription plans** from major providers. Compare pricing, supported models, rate limits, context windows, and usage control mechanisms across ChatGPT, Claude, Copilot, Cursor, Gemini Code Assist, Amazon Q, Command Code, Z.ai, Xiaomi MiMo, and more.
+Una lista curada de **planes de suscripción de IA para programar** de los principales proveedores. Compara precios, modelos soportados, límites de uso, ventanas de contexto y mecanismos de control entre ChatGPT, Claude, Copilot, Cursor, Gemini Code Assist, Amazon Q, Command Code, Z.ai, Xiaomi MiMo y más.
 
-📖 [Versión en español →](README.es.md)
+📖 [English version →](README.md)
 
 ---
 
-## 📊 The List
+## 📊 La Lista
 
-> Ordered by price ascending within each company. Updated automatically.
+> Ordenada por precio ascendente dentro de cada empresa. Actualizada automáticamente.
 
-| # | Company / Product | Plan | Price/mo | Coding Models | Context Window | Rate Limits & Window | Usage Control |
+| # | Empresa / Producto | Plan | Precio/mes | Modelos de Código | Ventana de Contexto | Límites y Ventana | Control de Uso |
 |---|-------------------|------|----------|---------------|----------------|----------------------|---------------|
 | 1 | **OpenAI**<br>ChatGPT | Free | Free | GPT-4o mini<br>GPT-4o (limited) | 128K (GPT-4o) | Limited GPT-4o messages; GPT-4o mini unrestricted<br><br>*Per session (3h rolling)* | Message-based rate limits |
 | 2 | **OpenAI**<br>ChatGPT | Plus | $20/mo | GPT-4o<br>o1<br>o3<br>o4-mini<br>Codex (codex-1)<br>GPT-4.5 (1M ctx) | 128K (GPT-4o) / 200K (o1,o3) / 1M (GPT-4.5) | ~80 msgs/3h (GPT-4o); ~50 msgs/week (o1); limited o3/o4-mini; Codex limited<br><br>*3h (GPT-4o) / weekly (o1,o3) / monthly (Codex)* | Message-based rate limits per time window |
@@ -59,77 +59,77 @@ A curated list of **AI coding subscription plans** from major providers. Compare
 
 ---
 
-## 📋 Template — Add a new subscription
+## 📋 Plantilla — Añadir una nueva suscripción
 
-Want to contribute? Add your entry to [`data/subscriptions.json`](data/subscriptions.json) and open a PR:
+¿Quieres contribuir? Añade tu entrada en [`data/subscriptions.json`](data/subscriptions.json) y abre un PR:
 
 ```json
 {
-  "company": "Company Name",
-  "product": "Product Name",
-  "plan": "Plan Name",
+  "company": "Nombre Empresa",
+  "product": "Nombre Producto",
+  "plan": "Nombre Plan",
   "price_monthly": 20,
   "price_annual": null,
-  "models": ["Model A", "Model B"],
+  "models": ["Modelo A", "Modelo B"],
   "token_context": "128K",
   "rate_limit": "80 msgs/3h",
-  "rate_window": "3h rolling",
-  "usage_control": "Message-based rate limits",
-  "coding_features": ["Feature 1", "Feature 2"],
+  "rate_window": "Ventana de 3h",
+  "usage_control": "Límites basados en mensajes",
+  "coding_features": ["Función 1", "Función 2"],
   "url": "https://example.com",
-  "notes": "Optional notes"
+  "notes": "Notas opcionales"
 }
 ```
 
-**The table is auto-generated** — no need to edit README.md directly.
+**La tabla se genera automáticamente** — no es necesario editar README.md directamente.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for full details.
-
----
-
-## 📐 Columns Explained
-
-| Column | Description |
-|--------|-------------|
-| **Coding Models** | AI models available for code generation, editing, and reasoning in each plan |
-| **Context Window** | Theoretical maximum tokens (input) the model can process in one request |
-| **Rate Limits & Window** | Practical usage caps (messages, requests, credits, prompts) and the time window they reset |
-| **Usage Control** | How the provider meters and limits usage (credits, messages, tokens, prompts) |
+Consulta [CONTRIBUTING.md](CONTRIBUTING.md) para más detalles.
 
 ---
 
-## 🏷️ Key Concepts
+## 📐 Columnas Explicadas
 
-### Rate Limit Windows
-- **3h / 5h rolling**: Limit resets continuously over a sliding window (e.g., "80 messages in the last 3 hours")
-- **Daily**: Resets at midnight or 24h after first request
-- **Weekly**: Resets every 7 days from first use
-- **Monthly**: Resets on the 1st of each month or billing date
-
-### Usage Control Mechanisms
-- **Message-based**: Counts each conversation turn (ChatGPT, Claude)
-- **Request-based**: Counts each model invocation (Copilot premium requests, Amazon Q)
-- **Credit-based**: Dollar-denominated pool consumed at API rates (Command Code, Cursor)
-- **Prompt-based**: Counts high-level prompts, each ~15-20 model calls (Z.ai)
-- **Token-based**: Direct per-token billing (API plans, Enterprise)
+| Columna | Descripción |
+|---------|-------------|
+| **Modelos de Código** | Modelos de IA disponibles para generar, editar y razonar código en cada plan |
+| **Ventana de Contexto** | Tokens máximos teóricos (entrada) que el modelo puede procesar en una solicitud |
+| **Límites y Ventana** | Límites prácticos de uso (mensajes, solicitudes, créditos, prompts) y la ventana de tiempo en que se reinician |
+| **Control de Uso** | Cómo el proveedor mide y limita el uso (créditos, mensajes, tokens, prompts) |
 
 ---
 
-## 🤖 Automation
+## 🏷️ Conceptos Clave
 
-The README is generated from [`data/subscriptions.json`](data/subscriptions.json) via [`scripts/generate_readme.py`](scripts/generate_readme.py) and auto-committed by a [GitHub Action](.github/workflows/update-readme.yml).
+### Ventanas de Límite
+- **3h / 5h continuas**: El límite se reinicia continuamente en una ventana deslizante
+- **Diario**: Se reinicia a medianoche o 24h después de la primera solicitud
+- **Semanal**: Se reinicia cada 7 días desde el primer uso
+- **Mensual**: Se reinicia el día 1 de cada mes o en la fecha de facturación
+
+### Mecanismos de Control de Uso
+- **Por mensajes**: Cuenta cada turno de conversación (ChatGPT, Claude)
+- **Por solicitudes**: Cuenta cada invocación al modelo (Copilot, Amazon Q)
+- **Por créditos**: Pool en dólares consumido a tarifas de API (Command Code, Cursor)
+- **Por prompts**: Cuenta prompts de alto nivel, cada uno ≈15-20 llamadas al modelo (Z.ai)
+- **Por tokens**: Facturación directa por token (planes API, Enterprise)
 
 ---
 
-## 🌍 Multi-language
+## 🤖 Automatización
 
-| Language | File |
-|----------|------|
-| English  | [`README.md`](README.md) |
-| Español  | [`README.es.md`](README.es.md) |
+El README se genera desde [`data/subscriptions.json`](data/subscriptions.json) mediante [`scripts/generate_readme.py`](scripts/generate_readme.py) y se actualiza automáticamente con un [GitHub Action](.github/workflows/update-readme.yml).
 
 ---
 
-## 🙌 Credits
+## 🌍 Multi-idioma
 
-Curated with ❤️ by the open-source community. Inspired by the [awesome](https://github.com/sindresorhus/awesome) list tradition.
+| Idioma | Archivo |
+|--------|---------|
+| English | [`README.md`](README.md) |
+| Español | [`README.es.md`](README.es.md) |
+
+---
+
+## 🙌 Créditos
+
+Curado con ❤️ por la comunidad open-source. Inspirado en la tradición de listas [awesome](https://github.com/sindresorhus/awesome).
