@@ -41,13 +41,21 @@ TABLE_SEPARATOR = "|---|-------------------|------|----------|------------------
 
 def build_rows(entries: list) -> list:
     rows = []
-    for i, e in enumerate(entries, 1):
-        company_product = f"**{e['company']}**<br>{e['product']}"
+    prev_key = None
+    row_num = 0
+    for e in entries:
+        row_num += 1
+        key = (e["company"], e["product"])
+        if key == prev_key:
+            company_product = ""
+        else:
+            company_product = f"**{e['company']}**<br>{e['product']}"
+            prev_key = key
         plan = e["plan"]
         price = fmt_price(e)
         models = fmt_models(e)
 
-        row = f"| {i} | {company_product} | {plan} | {price} | {models} |"
+        row = f"| {row_num} | {company_product} | {plan} | {price} | {models} |"
         rows.append(row)
     return rows
 
