@@ -94,8 +94,8 @@
       "price_monthly": 0,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Haiku 4", "context": "200K"}
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Haiku 4.5", "context": "200K"}
       ],
       "coding_features": ["Claude.ai chat", "Code execution", "Projects (limited)"],
       "notes": "No Claude Code; no Opus access",
@@ -108,9 +108,9 @@
       "price_monthly": 20,
       "price_annual": 200,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Opus 4", "context": "200K"},
-        {"name": "Claude Haiku 4", "context": "200K"}
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Opus 4.8", "context": "200K"},
+        {"name": "Claude Haiku 4.5", "context": "200K"}
       ],
       "coding_features": ["Claude Code (terminal agent)", "IDE extensions", "Projects (unlimited)", "Code execution", "/model switching"],
       "notes": "5x Free usage; Claude Code included; best for short coding sprints",
@@ -123,9 +123,9 @@
       "price_monthly": 100,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Opus 4", "context": "200K"},
-        {"name": "Claude Haiku 4", "context": "200K"}
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Opus 4.8", "context": "200K"},
+        {"name": "Claude Haiku 4.5", "context": "200K"}
       ],
       "coding_features": ["Claude Code (full)", "Parallel sub-agents", "Computer use", "Git integration", "Agent view", "Scheduled routines"],
       "notes": "5x Pro usage (25x Free); best for everyday coding in larger codebases",
@@ -138,9 +138,9 @@
       "price_monthly": 200,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Opus 4", "context": "200K"},
-        {"name": "Claude Haiku 4", "context": "200K"}
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Opus 4.8", "context": "200K"},
+        {"name": "Claude Haiku 4.5", "context": "200K"}
       ],
       "coding_features": ["Claude Code (maximum)", "Parallel sub-agents", "Computer use", "Git integration", "Agent view", "Scheduled routines"],
       "notes": "20x Pro usage (100x Free); most access for power users",
@@ -153,9 +153,9 @@
       "price_monthly": 25,
       "price_annual": 240,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Opus 4", "context": "200K"},
-        {"name": "Claude Haiku 4", "context": "200K"}
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Opus 4.8", "context": "200K"},
+        {"name": "Claude Haiku 4.5", "context": "200K"}
       ],
       "coding_features": ["Claude Code per seat", "Team collaboration", "Admin console", "Central billing", "SSO"],
       "notes": "Min 5 seats; 1.25x Pro per seat",
@@ -168,9 +168,9 @@
       "price_monthly": 20,
       "price_annual": 240,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "500K"},
-        {"name": "Claude Opus 4", "context": "500K"},
-        {"name": "Claude Haiku 4", "context": "500K"}
+        {"name": "Claude Sonnet 4.6", "context": "500K"},
+        {"name": "Claude Opus 4.8", "context": "500K"},
+        {"name": "Claude Haiku 4.5", "context": "500K"}
       ],
       "coding_features": ["Claude Code (no caps)", "SCIM", "Audit logs", "HIPAA", "Custom deployment", "500K context"],
       "notes": "20+ seats; pay-per-token billing; admin-set spend limits",
@@ -185,7 +185,7 @@
       "models": [
         {"name": "GPT-4o", "context": "128K"},
         {"name": "GPT-4.1", "context": "1M", "note": "base"},
-        {"name": "Claude Sonnet 4", "context": "200K", "note": "limited"}
+        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "limited"}
       ],
       "coding_features": ["Code completions (2K/mo)", "Chat (limited)", "Agent mode (limited)", "Code review (selection)"],
       "notes": "50 premium requests/mo; no Copilot CLI",
@@ -200,8 +200,8 @@
       "models": [
         {"name": "GPT-4o", "context": "128K", "note": "base, unlimited"},
         {"name": "GPT-4.1", "context": "1M", "note": "base, unlimited"},
-        {"name": "Claude Sonnet 4", "context": "200K", "note": "1× multiplier"},
-        {"name": "Claude Opus 4", "context": "200K", "note": "10× multiplier"},
+        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "1× multiplier"},
+        {"name": "Claude Opus 4.8", "context": "200K", "note": "10× multiplier"},
         {"name": "o4-mini", "context": "200K", "note": "0.33×"},
         {"name": "Gemini 2.5 Pro", "context": "1M", "note": "1×"},
         {"name": "GPT-4.5", "context": "1M", "note": "50× multiplier"}
@@ -219,8 +219,8 @@
       "models": [
         {"name": "GPT-4o", "context": "128K", "note": "base, unlimited"},
         {"name": "GPT-4.1", "context": "1M", "note": "base, unlimited"},
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Opus 4", "context": "200K"},
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Opus 4.8", "context": "200K"},
         {"name": "o4-mini", "context": "200K"},
         {"name": "Gemini 2.5 Pro", "context": "1M"},
         {"name": "GPT-4.5", "context": "1M"}
@@ -238,8 +238,8 @@
       "models": [
         {"name": "GPT-4o", "context": "128K", "note": "base, unlimited"},
         {"name": "GPT-4.1", "context": "1M", "note": "base, unlimited"},
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Opus 4", "context": "200K"},
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Opus 4.8", "context": "200K"},
         {"name": "o4-mini", "context": "200K"},
         {"name": "Gemini 2.5 Pro", "context": "1M"},
         {"name": "GPT-4.5", "context": "1M"}
@@ -257,8 +257,8 @@
       "models": [
         {"name": "GPT-4o", "context": "128K", "note": "base, unlimited"},
         {"name": "GPT-4.1", "context": "1M", "note": "base, unlimited"},
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Opus 4", "context": "200K"},
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Opus 4.8", "context": "200K"},
         {"name": "o4-mini", "context": "200K"},
         {"name": "Gemini 2.5 Pro", "context": "1M"},
         {"name": "GPT-4.5", "context": "1M"},
@@ -277,7 +277,7 @@
       "models": [
         {"name": "Cheetah (tab)", "context": "—"},
         {"name": "GPT-4o mini", "context": "128K"},
-        {"name": "Claude Sonnet 4", "context": "200K", "note": "limited"}
+        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "limited"}
       ],
       "coding_features": ["Tab completions (Cheetah, limited)", "Agent (limited)", "Chat"],
       "notes": "No Composer; no background agents; no Max Mode",
@@ -290,8 +290,8 @@
       "price_monthly": 20,
       "price_annual": 192,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K", "input_price": 3.00, "output_price": 15.00},
-        {"name": "Claude Opus 4", "context": "200K", "input_price": 5.00, "output_price": 25.00},
+        {"name": "Claude Sonnet 4.6", "context": "200K", "input_price": 3.00, "output_price": 15.00},
+        {"name": "Claude Opus 4.8", "context": "200K", "input_price": 5.00, "output_price": 25.00},
         {"name": "GPT-4o", "context": "128K", "input_price": 2.50, "output_price": 10.00},
         {"name": "o4-mini", "context": "200K", "input_price": 1.10, "output_price": 4.40},
         {"name": "Gemini 2.5 Pro", "context": "1M", "input_price": 1.25, "output_price": 10.00},
@@ -308,8 +308,8 @@
       "price_monthly": 60,
       "price_annual": 576,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K", "input_price": 3.00, "output_price": 15.00},
-        {"name": "Claude Opus 4", "context": "200K", "input_price": 5.00, "output_price": 25.00},
+        {"name": "Claude Sonnet 4.6", "context": "200K", "input_price": 3.00, "output_price": 15.00},
+        {"name": "Claude Opus 4.8", "context": "200K", "input_price": 5.00, "output_price": 25.00},
         {"name": "GPT-4o", "context": "128K", "input_price": 2.50, "output_price": 10.00},
         {"name": "o4-mini", "context": "200K", "input_price": 1.10, "output_price": 4.40},
         {"name": "Gemini 2.5 Pro", "context": "1M", "input_price": 1.25, "output_price": 10.00},
@@ -326,8 +326,8 @@
       "price_monthly": 200,
       "price_annual": 1920,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K", "input_price": 3.00, "output_price": 15.00},
-        {"name": "Claude Opus 4", "context": "200K", "input_price": 5.00, "output_price": 25.00},
+        {"name": "Claude Sonnet 4.6", "context": "200K", "input_price": 3.00, "output_price": 15.00},
+        {"name": "Claude Opus 4.8", "context": "200K", "input_price": 5.00, "output_price": 25.00},
         {"name": "GPT-4o", "context": "128K", "input_price": 2.50, "output_price": 10.00},
         {"name": "o4-mini", "context": "200K", "input_price": 1.10, "output_price": 4.40},
         {"name": "Gemini 2.5 Pro", "context": "1M", "input_price": 1.25, "output_price": 10.00},
@@ -344,8 +344,8 @@
       "price_monthly": 40,
       "price_annual": 384,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Opus 4", "context": "200K"},
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Opus 4.8", "context": "200K"},
         {"name": "GPT-4o", "context": "128K"},
         {"name": "o4-mini", "context": "200K"},
         {"name": "Gemini 2.5 Pro", "context": "1M"}
@@ -420,7 +420,7 @@
       "price_monthly": 0,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K", "note": "default"},
+        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "default"},
         {"name": "Claude Sonnet 3.7", "context": "200K"}
       ],
       "coding_features": ["Code completions", "Chat (IDE/CLI)", "Agentic coding", "Security scanning", "Code transformation (Java/.NET, limited)"],
@@ -434,7 +434,7 @@
       "price_monthly": 19,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K", "note": "default"},
+        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "default"},
         {"name": "Claude Sonnet 3.7", "context": "200K"}
       ],
       "coding_features": ["All Free features + higher limits", "IP indemnity", "Admin dashboard", "Code transformation (4K LOC/mo)", ".NET transformation (1M LOC)"],
@@ -571,7 +571,7 @@
         {"name": "MiMo-7B-RL", "context": "32K", "note": "MIT license, matches o1-mini"}
       ],
       "coding_features": ["MiMo Code (coding agent, early access)", "SWE-Bench 73.4% (V2-Flash)", "Claw-Eval 75.7 (V2-Pro)", "MIT license (7B, V2-Flash)"],
-      "notes": "V2-Pro matches Claude Opus 4 at lower cost; MiMo Code early access",
+      "notes": "V2-Pro matches Claude Opus 4.8 at lower cost; MiMo Code early access",
       "url": "https://mimo.xiaomi.com"
     },
     {
@@ -582,7 +582,7 @@
       "price_annual": 240,
       "models": [
         {"name": "Replit Agent", "context": "200K", "note": "proprietary"},
-        {"name": "Claude Sonnet 4", "context": "200K"},
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
         {"name": "GPT-4o", "context": "128K"}
       ],
       "coding_features": ["Replit Agent (build apps from prompt)", "Cloud IDE", "Instant deployment", "Collaboration", "Database & storage"],
@@ -610,8 +610,8 @@
       "price_monthly": 15,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Opus 4", "context": "200K"},
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Opus 4.8", "context": "200K"},
         {"name": "GPT-4o", "context": "128K"},
         {"name": "Gemini 2.5 Pro", "context": "1M"},
         {"name": "Cascade (full)", "context": "200K", "note": "proprietary agent"}
@@ -627,8 +627,8 @@
       "price_monthly": 60,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4", "context": "200K"},
-        {"name": "Claude Opus 4", "context": "200K"},
+        {"name": "Claude Sonnet 4.6", "context": "200K"},
+        {"name": "Claude Opus 4.8", "context": "200K"},
         {"name": "GPT-4o", "context": "128K"},
         {"name": "Gemini 2.5 Pro", "context": "1M"},
         {"name": "Cascade (full)", "context": "200K"}
