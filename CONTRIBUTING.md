@@ -91,12 +91,6 @@ A subscription plan must:
 3. Be **publicly available** (not closed beta or invite-only unless widely known)
 4. Focus primarily on **coding/software development** use cases
 
-## 🌐 Multi-language
-
-- The README is auto-generated in both English and Spanish
-- Descriptions and features are currently English-only in the data; translations welcome!
-- To add a new language, create `README.xx.md` and update the generation script
-
 ## 📬 Submitting
 
 1. Ensure your JSON is valid (test with `python3 -m json.tool data/subscriptions.json`)
