@@ -7,12 +7,24 @@
       "price_monthly": 0,
       "price_annual": null,
       "models": [
-        {"name": "GPT-4o mini", "context": "128K"},
-        {"name": "GPT-4o", "context": "128K", "note": "limited"}
+        {"name": "GPT-5.5", "context": "1M", "note": "Instant; ~10 msgs/5h"}
       ],
-      "coding_features": ["Code Interpreter (limited)", "File upload"],
-      "notes": "No Codex agent access",
-      "url": "https://chatgpt.com"
+      "coding_features": ["Codex (quick tasks)", "Code interpreter (limited)", "File upload"],
+      "notes": "GPT-4o/o1/o3/o4-mini/GPT-4.5 retired from ChatGPT in 2026; GPT-5.5 is the default model",
+      "url": "https://chatgpt.com/pricing/"
+    },
+    {
+      "company": "OpenAI",
+      "product": "ChatGPT",
+      "plan": "Go",
+      "price_monthly": 8,
+      "price_annual": null,
+      "models": [
+        {"name": "GPT-5.5", "context": "1M", "note": "Instant + limited Thinking"}
+      ],
+      "coding_features": ["Codex (lightweight coding tasks)", "Code interpreter"],
+      "notes": "Budget tier between Free and Plus; available in 170+ countries",
+      "url": "https://chatgpt.com/pricing/"
     },
     {
       "company": "OpenAI",
@@ -21,71 +33,78 @@
       "price_monthly": 20,
       "price_annual": null,
       "models": [
-        {"name": "GPT-4o", "context": "128K"},
-        {"name": "o1", "context": "200K"},
-        {"name": "o3", "context": "200K"},
-        {"name": "o4-mini", "context": "200K"},
-        {"name": "GPT-4.5", "context": "1M"},
-        {"name": "Codex (codex-1)", "context": "200K", "note": "sandboxed VM agent"}
+        {"name": "GPT-5.5", "context": "1M", "note": "Instant + Thinking"},
+        {"name": "GPT-5.4", "context": "1M"},
+        {"name": "GPT-5.4 mini", "context": "400K"},
+        {"name": "GPT-5.3 Codex", "context": "1M", "note": "coding agent"}
       ],
-      "coding_features": ["Codex agent (browser sandbox)", "Codex CLI (open source)", "Code Interpreter", "GPT-4.5 1M context"],
-      "notes": "80 msgs/3h GPT-4o; ~50 msgs/week o1; Codex tasks 1-30 min",
-      "url": "https://chatgpt.com"
+      "coding_features": ["Codex agent (web/CLI/IDE/iOS)", "Codex CLI (open source)", "Code interpreter"],
+      "notes": "1× baseline usage; Codex ~15-80 GPT-5.5 msgs/5h; token-based Codex billing since Apr 2026",
+      "url": "https://developers.openai.com/codex/pricing"
     },
     {
       "company": "OpenAI",
       "product": "ChatGPT",
-      "plan": "Pro",
+      "plan": "Pro (5×)",
+      "price_monthly": 100,
+      "price_annual": null,
+      "models": [
+        {"name": "GPT-5.5 Pro", "context": "1M", "note": "extended reasoning"},
+        {"name": "GPT-5.5", "context": "1M"},
+        {"name": "GPT-5.4", "context": "1M"},
+        {"name": "GPT-5.3 Codex", "context": "1M"}
+      ],
+      "coding_features": ["Codex agent (5× Plus limits)", "Codex CLI", "GPT-5.5 Pro reasoning", "Code interpreter"],
+      "notes": "5× Plus usage quotas (launched Apr 2026); ~75-400 GPT-5.5 Codex msgs/5h",
+      "url": "https://chatgpt.com/pricing/"
+    },
+    {
+      "company": "OpenAI",
+      "product": "ChatGPT",
+      "plan": "Pro (20×)",
       "price_monthly": 200,
       "price_annual": null,
       "models": [
-        {"name": "GPT-4o", "context": "128K", "note": "unlimited"},
-        {"name": "o1 pro mode", "context": "200K", "note": "extra compute"},
-        {"name": "o1", "context": "200K", "note": "unlimited"},
-        {"name": "o3", "context": "200K", "note": "unlimited"},
-        {"name": "o4-mini", "context": "200K", "note": "unlimited"},
-        {"name": "GPT-4.5", "context": "1M"},
-        {"name": "Codex (codex-1)", "context": "200K", "note": "full access"}
+        {"name": "GPT-5.5 Pro", "context": "1M", "note": "extended reasoning"},
+        {"name": "GPT-5.5", "context": "1M", "note": "unlimited"},
+        {"name": "GPT-5.4", "context": "1M", "note": "unlimited"},
+        {"name": "GPT-5.3 Codex", "context": "1M"}
       ],
-      "coding_features": ["Codex agent (unlimited)", "Codex CLI", "o1 pro mode", "Code Interpreter", "GPT-4.5 1M context"],
-      "notes": "Unlimited main models; o1 pro mode uses extra compute for hardest problems",
-      "url": "https://chatgpt.com"
+      "coding_features": ["Codex agent (20× Plus limits)", "Codex CLI", "GPT-5.5 Pro reasoning", "Sora video", "Code interpreter"],
+      "notes": "20× Plus usage quotas; ~300-1,600 GPT-5.5 Codex msgs/5h; most access for power users",
+      "url": "https://chatgpt.com/pricing/"
     },
     {
       "company": "OpenAI",
       "product": "ChatGPT",
-      "plan": "Team",
-      "price_monthly": 25,
+      "plan": "Business",
+      "price_monthly": 30,
       "price_annual": 300,
       "models": [
-        {"name": "GPT-4o", "context": "128K"},
-        {"name": "o1", "context": "200K"},
-        {"name": "o3", "context": "200K"},
-        {"name": "o4-mini", "context": "200K"},
-        {"name": "GPT-4.5", "context": "1M"},
-        {"name": "Codex (codex-1)", "context": "200K"}
+        {"name": "GPT-5.5", "context": "1M"},
+        {"name": "GPT-5.4", "context": "1M"},
+        {"name": "GPT-5.3 Codex", "context": "1M"}
       ],
-      "coding_features": ["Codex agent", "Codex CLI", "Admin console", "Data excluded from training", "Workspace sharing"],
-      "notes": "Min 2 users; higher limits than Plus; data not used for training",
-      "url": "https://chatgpt.com"
+      "coding_features": ["Codex agent", "Codex CLI", "Admin console", "Data excluded from training", "Workspace security"],
+      "notes": "Formerly 'Team'; $25/user/mo billed annually; min 2 users",
+      "url": "https://chatgpt.com/pricing/"
     },
     {
       "company": "OpenAI",
       "product": "ChatGPT",
       "plan": "Enterprise",
-      "price_monthly": 60,
-      "price_annual": 720,
+      "price_monthly": 0,
+      "price_annual": null,
+      "price_display": "Custom",
       "models": [
-        {"name": "GPT-4o", "context": "128K"},
-        {"name": "o1", "context": "200K"},
-        {"name": "o3", "context": "200K"},
-        {"name": "o4-mini", "context": "200K"},
-        {"name": "GPT-4.5", "context": "1M"},
-        {"name": "Codex (codex-1)", "context": "200K"}
+        {"name": "GPT-5.5 Pro", "context": "1M"},
+        {"name": "GPT-5.5", "context": "1M"},
+        {"name": "GPT-5.4", "context": "1M"},
+        {"name": "GPT-5.3 Codex", "context": "1M"}
       ],
-      "coding_features": ["Codex agent", "Codex CLI", "SSO/SAML", "Audit logs", "Custom models", "Data privacy"],
-      "notes": "Custom pricing available; enterprise security & compliance",
-      "url": "https://chatgpt.com"
+      "coding_features": ["Codex Enterprise (priority processing)", "Codex CLI", "SSO/SCIM", "Audit logs", "Custom limits", "Data privacy"],
+      "notes": "Custom pricing (contact sales); token-based Codex billing; enterprise security & compliance",
+      "url": "https://chatgpt.com/pricing/"
     },
     {
       "company": "Anthropic",
@@ -94,27 +113,27 @@
       "price_monthly": 0,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Haiku 4.5", "context": "200K"}
+        {"name": "Claude Sonnet 5", "context": "200K", "note": "default"}
       ],
-      "coding_features": ["Claude.ai chat", "Code execution", "Projects (limited)"],
-      "notes": "No Claude Code; no Opus access",
-      "url": "https://claude.ai"
+      "coding_features": ["Claude.ai chat", "Code execution", "Web search", "Projects (limited)"],
+      "notes": "Sonnet 5 replaced Sonnet 4.6 (Jun 30 2026); no Claude Code; no Opus access",
+      "url": "https://claude.com/pricing"
     },
     {
       "company": "Anthropic",
       "product": "Claude",
       "plan": "Pro",
       "price_monthly": 20,
-      "price_annual": 200,
+      "price_annual": 204,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Opus 4.8", "context": "200K"},
-        {"name": "Claude Haiku 4.5", "context": "200K"}
+        {"name": "Claude Sonnet 5", "context": "1M", "note": "default"},
+        {"name": "Claude Opus 4.8", "context": "1M", "note": "needs usage credits in Code"},
+        {"name": "Claude Haiku 4.5", "context": "200K"},
+        {"name": "Claude Fable 5", "context": "1M", "note": "via usage credits/promo"}
       ],
-      "coding_features": ["Claude Code (terminal agent)", "IDE extensions", "Projects (unlimited)", "Code execution", "/model switching"],
-      "notes": "5x Free usage; Claude Code included; best for short coding sprints",
-      "url": "https://claude.ai"
+      "coding_features": ["Claude Code (terminal agent)", "IDE extensions (VS Code, JetBrains)", "Claude Cowork", "Projects (unlimited)", "/model switching"],
+      "notes": "~5× Free; usage shared across chat + Claude Code; 5h window + weekly cap; $17/mo billed annually",
+      "url": "https://support.claude.com/en/articles/8325606"
     },
     {
       "company": "Anthropic",
@@ -123,13 +142,14 @@
       "price_monthly": 100,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Opus 4.8", "context": "200K"},
-        {"name": "Claude Haiku 4.5", "context": "200K"}
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Claude Opus 4.8", "context": "1M", "note": "auto 1M, no credits needed"},
+        {"name": "Claude Haiku 4.5", "context": "200K"},
+        {"name": "Claude Fable 5", "context": "1M", "note": "usage-credit conditions"}
       ],
-      "coding_features": ["Claude Code (full)", "Parallel sub-agents", "Computer use", "Git integration", "Agent view", "Scheduled routines"],
-      "notes": "5x Pro usage (25x Free); best for everyday coding in larger codebases",
-      "url": "https://claude.ai"
+      "coding_features": ["Claude Code (full)", "Sub-agents", "Computer use", "IDE extensions", "Cowork", "Early access to new models"],
+      "notes": "5× Pro usage; dual weekly limits (all-models + Sonnet-only); Opus without extra config",
+      "url": "https://support.claude.com/en/articles/11049741"
     },
     {
       "company": "Anthropic",
@@ -138,28 +158,30 @@
       "price_monthly": 200,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Opus 4.8", "context": "200K"},
-        {"name": "Claude Haiku 4.5", "context": "200K"}
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Claude Haiku 4.5", "context": "200K"},
+        {"name": "Claude Fable 5", "context": "1M", "note": "usage-credit conditions"}
       ],
-      "coding_features": ["Claude Code (maximum)", "Parallel sub-agents", "Computer use", "Git integration", "Agent view", "Scheduled routines"],
-      "notes": "20x Pro usage (100x Free); most access for power users",
-      "url": "https://claude.ai"
+      "coding_features": ["Claude Code (maximum)", "Sub-agents", "Computer use", "IDE extensions", "Cowork", "Priority access"],
+      "notes": "20× Pro usage; highest individual ceiling before usage credits; free for qualifying OSS maintainers (6 mo)",
+      "url": "https://support.claude.com/en/articles/11049741"
     },
     {
       "company": "Anthropic",
       "product": "Claude",
-      "plan": "Team Standard",
+      "plan": "Team",
       "price_monthly": 25,
       "price_annual": 240,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Opus 4.8", "context": "200K"},
-        {"name": "Claude Haiku 4.5", "context": "200K"}
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Claude Opus 4.8", "context": "1M", "note": "auto 1M on Team"},
+        {"name": "Claude Haiku 4.5", "context": "200K"},
+        {"name": "Claude Fable 5", "context": "1M", "note": "usage-credit conditions"}
       ],
-      "coding_features": ["Claude Code per seat", "Team collaboration", "Admin console", "Central billing", "SSO"],
-      "notes": "Min 5 seats; 1.25x Pro per seat",
-      "url": "https://claude.ai"
+      "coding_features": ["Claude Code per seat", "Cowork", "Central billing", "SSO", "Admin controls", "Enterprise search"],
+      "notes": "Standard seat $20/mo annual; Premium seat $125/mo (5× usage); up to 150 seats",
+      "url": "https://support.claude.com/en/articles/9266767"
     },
     {
       "company": "Anthropic",
@@ -168,13 +190,114 @@
       "price_monthly": 20,
       "price_annual": 240,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "500K"},
-        {"name": "Claude Opus 4.8", "context": "500K"},
-        {"name": "Claude Haiku 4.5", "context": "500K"}
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Claude Haiku 4.5", "context": "200K"},
+        {"name": "Claude Fable 5", "context": "1M", "note": "available at launch"}
       ],
-      "coding_features": ["Claude Code (no caps)", "SCIM", "Audit logs", "HIPAA", "Custom deployment", "500K context"],
-      "notes": "20+ seats; pay-per-token billing; admin-set spend limits",
-      "url": "https://claude.ai"
+      "coding_features": ["Claude Code (no plan caps)", "SCIM", "Audit logs", "Compliance/Analytics API", "HIPAA-ready", "Customer-managed keys"],
+      "notes": "~$20/seat/yr + usage billed at API rates; min 20 seats; admin-set spend limits",
+      "url": "https://support.claude.com/en/articles/9797531"
+    },
+    {
+      "company": "Google",
+      "product": "Gemini (Antigravity)",
+      "plan": "Free",
+      "price_monthly": 0,
+      "price_annual": null,
+      "models": [
+        {"name": "Gemini 3.5 Flash", "context": "1M", "note": "agents/coding"},
+        {"name": "Gemini 3.1 Pro", "context": "1M", "note": "limited access"}
+      ],
+      "coding_features": ["Antigravity IDE (free tier)", "Antigravity CLI", "Gemini app"],
+      "notes": "Antigravity replaced Gemini CLI/Code Assist extensions for individuals (Jun 18 2026); baseline limits",
+      "url": "https://gemini.google/subscriptions/"
+    },
+    {
+      "company": "Google",
+      "product": "Gemini (Antigravity)",
+      "plan": "AI Plus",
+      "price_monthly": 4.99,
+      "price_annual": null,
+      "models": [
+        {"name": "Gemini 3.5 Flash", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M", "note": "varying access"}
+      ],
+      "coding_features": ["Antigravity access", "Gemini app", "400GB storage"],
+      "notes": "2× free-tier limits; reduced from $7.99 in Jun 2026; not a coding-focused tier",
+      "url": "https://gemini.google/subscriptions/"
+    },
+    {
+      "company": "Google",
+      "product": "Gemini (Antigravity)",
+      "plan": "AI Pro",
+      "price_monthly": 19.99,
+      "price_annual": null,
+      "models": [
+        {"name": "Gemini 3.1 Pro", "context": "1M"},
+        {"name": "Gemini 3.5 Flash", "context": "1M"}
+      ],
+      "coding_features": ["Antigravity (higher agent rate limits)", "Antigravity CLI", "PAYG top-up credits", "2TB storage"],
+      "notes": "4× free-tier limits; 50% off first year; coding path is now Antigravity",
+      "url": "https://gemini.google/subscriptions/"
+    },
+    {
+      "company": "Google",
+      "product": "Gemini (Antigravity)",
+      "plan": "AI Ultra",
+      "price_monthly": 100,
+      "price_annual": null,
+      "models": [
+        {"name": "Gemini 3.1 Pro", "context": "1M", "note": "full access"},
+        {"name": "Gemini 3.5 Pro", "context": "2M", "note": "GA rollout"},
+        {"name": "Gemini 3.5 Flash", "context": "1M"}
+      ],
+      "coding_features": ["Highest-priority Antigravity limits", "Deep Think (early)", "Gemini Spark agent", "PAYG top-ups"],
+      "notes": "~5× AI Pro limits; dev-oriented entry Ultra tier (Google I/O 2026)",
+      "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/"
+    },
+    {
+      "company": "Google",
+      "product": "Gemini (Antigravity)",
+      "plan": "AI Ultra (Max)",
+      "price_monthly": 200,
+      "price_annual": null,
+      "models": [
+        {"name": "Gemini 3.1 Pro", "context": "1M"},
+        {"name": "Gemini 3.5 Pro", "context": "2M"},
+        {"name": "Gemini 3.5 Flash", "context": "1M"}
+      ],
+      "coding_features": ["Max Antigravity limits", "Deep Think", "Gemini Spark", "Project Genie"],
+      "notes": "~20× AI Pro limits; reduced from $250; heaviest-usage consumer plan",
+      "url": "https://blog.google/products-and-platforms/products/google-one/google-ai-subscriptions/"
+    },
+    {
+      "company": "Google",
+      "product": "Gemini Code Assist (Cloud)",
+      "plan": "Standard",
+      "price_monthly": 22.8,
+      "price_annual": 228,
+      "models": [
+        {"name": "Gemini 3", "context": "1M", "note": "Preview channel"},
+        {"name": "Gemini 2.5 Pro", "context": "1M"}
+      ],
+      "coding_features": ["Agent Mode / Gemini CLI (server-side)", "Code completion across IDEs", "IP indemnity", "MCP support"],
+      "notes": "~$19/user/mo annual; 1,500 requests/user/day; Cloud editions keep Gemini CLI",
+      "url": "https://docs.cloud.google.com/gemini/docs/codeassist/overview"
+    },
+    {
+      "company": "Google",
+      "product": "Gemini Code Assist (Cloud)",
+      "plan": "Enterprise",
+      "price_monthly": 54,
+      "price_annual": 540,
+      "models": [
+        {"name": "Gemini 3", "context": "1M", "note": "Preview channel"},
+        {"name": "Gemini 2.5 Pro", "context": "1M"}
+      ],
+      "coding_features": ["All Standard features", "Code customization (private repos)", "Agentic chat", "Apigee/Integration extensions"],
+      "notes": "~$45/user/mo annual; 2,000 requests/user/day; customer code not used for training",
+      "url": "https://docs.cloud.google.com/gemini/docs/codeassist/overview"
     },
     {
       "company": "GitHub / Microsoft",
@@ -183,13 +306,12 @@
       "price_monthly": 0,
       "price_annual": null,
       "models": [
-        {"name": "GPT-4o", "context": "128K"},
-        {"name": "GPT-4.1", "context": "1M", "note": "base"},
-        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "limited"}
+        {"name": "Claude Haiku 4.5", "context": "200K", "note": "base"},
+        {"name": "GPT-5 mini", "context": "400K", "note": "base"}
       ],
-      "coding_features": ["Code completions (2K/mo)", "Chat (limited)", "Agent mode (limited)", "Code review (selection)"],
-      "notes": "50 premium requests/mo; no Copilot CLI",
-      "url": "https://github.com/features/copilot"
+      "coding_features": ["2,000 code completions/mo", "Chat (limited)", "Agent mode (limited)", "Copilot CLI"],
+      "notes": "No pooled AI credits; completions capped",
+      "url": "https://github.com/features/copilot/plans"
     },
     {
       "company": "GitHub / Microsoft",
@@ -198,17 +320,16 @@
       "price_monthly": 10,
       "price_annual": 100,
       "models": [
-        {"name": "GPT-4o", "context": "128K", "note": "base, unlimited"},
-        {"name": "GPT-4.1", "context": "1M", "note": "base, unlimited"},
-        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "1× multiplier"},
-        {"name": "Claude Opus 4.8", "context": "200K", "note": "10× multiplier"},
-        {"name": "o4-mini", "context": "200K", "note": "0.33×"},
-        {"name": "Gemini 2.5 Pro", "context": "1M", "note": "1×"},
-        {"name": "GPT-4.5", "context": "1M", "note": "50× multiplier"}
+        {"name": "GPT-5.5", "context": "272K"},
+        {"name": "GPT-5.3 Codex", "context": "1M"},
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M", "note": "preview"},
+        {"name": "GPT-5 mini", "context": "400K", "note": "base, unlimited"}
       ],
-      "coding_features": ["Code completions (unlimited)", "Agent mode (IDE)", "Copilot CLI", "Chat", "PR summaries", "Next edit suggestions"],
-      "notes": "300 premium requests/mo + $0.04/req overage; base models unlimited",
-      "url": "https://github.com/features/copilot"
+      "coding_features": ["Unlimited completions", "Agent mode", "Copilot CLI", "Cloud coding agent", "Code review", "Model picker", "MCP"],
+      "notes": "$10 AI Credits/mo (~1,500 credits); usage-based billing since Jun 1 2026 (1 credit = $0.01)",
+      "url": "https://github.com/features/copilot/plans"
     },
     {
       "company": "GitHub / Microsoft",
@@ -217,17 +338,33 @@
       "price_monthly": 39,
       "price_annual": null,
       "models": [
-        {"name": "GPT-4o", "context": "128K", "note": "base, unlimited"},
-        {"name": "GPT-4.1", "context": "1M", "note": "base, unlimited"},
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Opus 4.8", "context": "200K"},
-        {"name": "o4-mini", "context": "200K"},
-        {"name": "Gemini 2.5 Pro", "context": "1M"},
-        {"name": "GPT-4.5", "context": "1M"}
+        {"name": "GPT-5.5", "context": "272K"},
+        {"name": "GPT-5.3 Codex", "context": "1M"},
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"},
+        {"name": "Kimi K2.7 Code", "context": "256K"}
       ],
-      "coding_features": ["All Pro features", "1,500 premium requests/mo", "Higher premium model access"],
-      "notes": "5× premium requests vs Pro (1,500 vs 300)",
-      "url": "https://github.com/features/copilot"
+      "coding_features": ["All Pro features", "Premium models incl. Opus", "Audit logs", "~4× Pro included usage"],
+      "notes": "$39 AI Credits/mo (~7,000 credits)",
+      "url": "https://github.com/features/copilot/plans"
+    },
+    {
+      "company": "GitHub / Microsoft",
+      "product": "Copilot",
+      "plan": "Max",
+      "price_monthly": 100,
+      "price_annual": null,
+      "models": [
+        {"name": "GPT-5.5", "context": "272K"},
+        {"name": "GPT-5.3 Codex", "context": "1M"},
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"}
+      ],
+      "coding_features": ["All Pro+ features", "Priority access to new models", "~2.9× Pro+ included usage"],
+      "notes": "$200 AI Credits/mo (~20,000 credits); new individual top tier",
+      "url": "https://github.com/features/copilot/plans"
     },
     {
       "company": "GitHub / Microsoft",
@@ -236,17 +373,15 @@
       "price_monthly": 19,
       "price_annual": null,
       "models": [
-        {"name": "GPT-4o", "context": "128K", "note": "base, unlimited"},
-        {"name": "GPT-4.1", "context": "1M", "note": "base, unlimited"},
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Opus 4.8", "context": "200K"},
-        {"name": "o4-mini", "context": "200K"},
-        {"name": "Gemini 2.5 Pro", "context": "1M"},
-        {"name": "GPT-4.5", "context": "1M"}
+        {"name": "GPT-5.5", "context": "272K"},
+        {"name": "GPT-5.3 Codex", "context": "1M"},
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"}
       ],
-      "coding_features": ["All Pro features + Cloud agents", "Code review (full PR)", "MCP support", "Org policies", "Content exclusion", "Chat skills"],
-      "notes": "300 premium req/user/mo; cloud agents & MCP; org-wide policies",
-      "url": "https://github.com/features/copilot"
+      "coding_features": ["All coding features", "Org policy controls", "IP indemnity", "Pooled org credits", "Admin budget caps"],
+      "notes": "$19 AI Credits/user/mo (+$30/mo promo credits Jun-Aug 2026)",
+      "url": "https://github.com/features/copilot/plans"
     },
     {
       "company": "GitHub / Microsoft",
@@ -255,18 +390,15 @@
       "price_monthly": 39,
       "price_annual": null,
       "models": [
-        {"name": "GPT-4o", "context": "128K", "note": "base, unlimited"},
-        {"name": "GPT-4.1", "context": "1M", "note": "base, unlimited"},
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Opus 4.8", "context": "200K"},
-        {"name": "o4-mini", "context": "200K"},
-        {"name": "Gemini 2.5 Pro", "context": "1M"},
-        {"name": "GPT-4.5", "context": "1M"},
-        {"name": "All premium models", "context": "varies"}
+        {"name": "GPT-5.5", "context": "272K"},
+        {"name": "GPT-5.3 Codex", "context": "1M"},
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"}
       ],
-      "coding_features": ["All Business features + Audit logs", "IP indemnity", "SAML/SSO", "Custom models", "Knowledge bases"],
-      "notes": "Requires GitHub Enterprise Cloud; 1,000 premium req/user/mo",
-      "url": "https://github.com/features/copilot"
+      "coding_features": ["All Business features", "Priority model access", "Knowledge bases", "Fine-tuning options", "Deep GitHub integration"],
+      "notes": "$39 AI Credits/user/mo (+$70/mo promo credits Jun-Aug 2026); requires GitHub Enterprise Cloud",
+      "url": "https://github.com/features/copilot/plans"
     },
     {
       "company": "Cursor",
@@ -275,13 +407,13 @@
       "price_monthly": 0,
       "price_annual": null,
       "models": [
-        {"name": "Cheetah (tab)", "context": "—"},
-        {"name": "GPT-4o mini", "context": "128K"},
-        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "limited"}
+        {"name": "Cheetah (Tab)", "context": "—", "note": "limited"},
+        {"name": "Auto mode", "context": "—", "note": "limited"},
+        {"name": "Composer 2.5", "context": "1M", "note": "limited"}
       ],
-      "coding_features": ["Tab completions (Cheetah, limited)", "Agent (limited)", "Chat"],
-      "notes": "No Composer; no background agents; no Max Mode",
-      "url": "https://cursor.com"
+      "coding_features": ["Limited Agent requests", "Limited Tab completions", "Chat"],
+      "notes": "No credit card required",
+      "url": "https://cursor.com/pricing"
     },
     {
       "company": "Cursor",
@@ -290,16 +422,15 @@
       "price_monthly": 20,
       "price_annual": 192,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K", "input_price": 3.00, "output_price": 15.00},
-        {"name": "Claude Opus 4.8", "context": "200K", "input_price": 5.00, "output_price": 25.00},
-        {"name": "GPT-4o", "context": "128K", "input_price": 2.50, "output_price": 10.00},
-        {"name": "o4-mini", "context": "200K", "input_price": 1.10, "output_price": 4.40},
-        {"name": "Gemini 2.5 Pro", "context": "1M", "input_price": 1.25, "output_price": 10.00},
-        {"name": "Cheetah (tab)", "context": "—", "note": "free, unlimited"}
+        {"name": "Composer 2.5", "context": "1M", "note": "first-party, Auto unlimited"},
+        {"name": "Cheetah (Tab)", "context": "—", "note": "free, unlimited"},
+        {"name": "Claude Sonnet 5 / Opus 4.8", "context": "1M", "note": "from credit pool"},
+        {"name": "GPT-5.5", "context": "1M", "note": "from credit pool"},
+        {"name": "Gemini 3.1 Pro", "context": "1M", "note": "from credit pool"}
       ],
-      "coding_features": ["Agent Mode", "Composer (multi-file)", "Tab (unlimited)", "Background agents", "Cloud agents", "Bugbot", "MCP/Skills/Hooks"],
-      "notes": "$20 credit pool (~225 Sonnet requests); Auto Mode free & unlimited",
-      "url": "https://cursor.com"
+      "coding_features": ["Agent Mode", "Composer (multi-file)", "Tab (unlimited)", "Background/cloud agents", "Bugbot", "Max mode", "MCP/Skills/Hooks"],
+      "notes": "~$20 usage credit pool; Composer/Auto unlimited & don't draw from pool",
+      "url": "https://cursor.com/pricing"
     },
     {
       "company": "Cursor",
@@ -308,16 +439,15 @@
       "price_monthly": 60,
       "price_annual": 576,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K", "input_price": 3.00, "output_price": 15.00},
-        {"name": "Claude Opus 4.8", "context": "200K", "input_price": 5.00, "output_price": 25.00},
-        {"name": "GPT-4o", "context": "128K", "input_price": 2.50, "output_price": 10.00},
-        {"name": "o4-mini", "context": "200K", "input_price": 1.10, "output_price": 4.40},
-        {"name": "Gemini 2.5 Pro", "context": "1M", "input_price": 1.25, "output_price": 10.00},
-        {"name": "Cheetah (tab)", "context": "—", "note": "free, unlimited"}
+        {"name": "Composer 2.5", "context": "1M", "note": "Auto unlimited"},
+        {"name": "Cheetah (Tab)", "context": "—", "note": "free, unlimited"},
+        {"name": "Claude Sonnet 5 / Opus 4.8", "context": "1M"},
+        {"name": "GPT-5.5", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"}
       ],
-      "coding_features": ["All Pro features + 3.5× credit pool", "~790 Sonnet requests equivalent"],
-      "notes": "$70 credit pool; Auto Mode unlimited; premium picks cost credits",
-      "url": "https://cursor.com"
+      "coding_features": ["All Pro features", "3× usage on frontier models"],
+      "notes": "~$60 credit pool; 3× Pro usage on OpenAI/Claude/Gemini",
+      "url": "https://cursor.com/pricing"
     },
     {
       "company": "Cursor",
@@ -326,16 +456,15 @@
       "price_monthly": 200,
       "price_annual": 1920,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K", "input_price": 3.00, "output_price": 15.00},
-        {"name": "Claude Opus 4.8", "context": "200K", "input_price": 5.00, "output_price": 25.00},
-        {"name": "GPT-4o", "context": "128K", "input_price": 2.50, "output_price": 10.00},
-        {"name": "o4-mini", "context": "200K", "input_price": 1.10, "output_price": 4.40},
-        {"name": "Gemini 2.5 Pro", "context": "1M", "input_price": 1.25, "output_price": 10.00},
-        {"name": "Cheetah (tab)", "context": "—", "note": "free, unlimited"}
+        {"name": "Composer 2.5", "context": "1M", "note": "Auto unlimited"},
+        {"name": "Cheetah (Tab)", "context": "—", "note": "free, unlimited"},
+        {"name": "Claude Sonnet 5 / Opus 4.8", "context": "1M"},
+        {"name": "GPT-5.5", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"}
       ],
-      "coding_features": ["All Pro features + 20× credit pool", "~4,500 Sonnet requests", "Priority access"],
-      "notes": "$400 credit pool; for heavy agent power users",
-      "url": "https://cursor.com"
+      "coding_features": ["All Pro features", "20× usage on frontier models", "Priority access to new features"],
+      "notes": "~$400 credit pool; 20× Pro usage; for heavy agent power users",
+      "url": "https://cursor.com/pricing"
     },
     {
       "company": "Cursor",
@@ -344,235 +473,73 @@
       "price_monthly": 40,
       "price_annual": 384,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Opus 4.8", "context": "200K"},
-        {"name": "GPT-4o", "context": "128K"},
-        {"name": "o4-mini", "context": "200K"},
-        {"name": "Gemini 2.5 Pro", "context": "1M"}
+        {"name": "Composer 2.5", "context": "1M", "note": "Composer/Auto pool"},
+        {"name": "Claude Sonnet 5 / Opus 4.8", "context": "1M", "note": "3rd-party pool"},
+        {"name": "GPT-5.5", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"}
       ],
-      "coding_features": ["All Pro features + SSO/SAML", "Admin dashboard", "Org-enforced privacy", "Analytics"],
-      "notes": "Central admin & compliance for teams; per-user credit pool",
-      "url": "https://cursor.com"
+      "coding_features": ["All Pro features", "SSO/SAML", "Admin dashboard", "Agentic code reviews", "Usage analytics", "Team privacy"],
+      "notes": "Standard seat $32/mo annual; Premium seat $120/mo (5× usage); pricing updated Jul 1 2026",
+      "url": "https://cursor.com/blog/teams-pricing-june-2026"
     },
     {
-      "company": "Google",
-      "product": "Gemini Code Assist",
-      "plan": "Individual (Free)",
-      "price_monthly": 0,
-      "price_annual": null,
-      "models": [
-        {"name": "Gemini 2.5 Pro", "context": "1M", "note": "auto-selected"},
-        {"name": "Gemini 2.5 Flash", "context": "1M", "note": "auto-selected"}
-      ],
-      "coding_features": ["Gemini CLI (terminal agent)", "Agent Mode (IDE)", "Code completions", "Chat", "MCP support"],
-      "notes": "1,000 RPD agent/CLI; 6,000 code completions/day; model auto-selected",
-      "url": "https://codeassist.google"
-    },
-    {
-      "company": "Google",
-      "product": "Gemini Code Assist",
-      "plan": "AI Pro (Individual)",
-      "price_monthly": 20,
-      "price_annual": null,
-      "models": [
-        {"name": "Gemini 2.5 Pro", "context": "1M"},
-        {"name": "Gemini 2.5 Flash", "context": "1M"},
-        {"name": "Gemini 3", "context": "1M", "note": "preview"}
-      ],
-      "coding_features": ["All Free features + higher limits", "Google AI Pro benefits", "2TB storage", "Priority access"],
-      "notes": "~1,500+ RPD; bundled with Google One AI Pro ($19.99/mo)",
-      "url": "https://one.google.com/ai"
-    },
-    {
-      "company": "Google",
-      "product": "Gemini Code Assist",
-      "plan": "Standard (Teams)",
-      "price_monthly": 22.8,
-      "price_annual": 228,
-      "models": [
-        {"name": "Gemini 2.5 Pro", "context": "1M"},
-        {"name": "Gemini 2.5 Flash", "context": "1M"},
-        {"name": "Gemini 3", "context": "1M", "note": "preview"}
-      ],
-      "coding_features": ["All Individual features + Admin console", "Code customization (org repos)", "Org policy controls", "Usage metrics"],
-      "notes": "120 RPM / 1,500 RPD; code customization indexes 20K private repos",
-      "url": "https://codeassist.google"
-    },
-    {
-      "company": "Google",
-      "product": "Gemini Code Assist",
-      "plan": "Enterprise",
-      "price_monthly": 54,
-      "price_annual": 540,
-      "models": [
-        {"name": "Gemini 2.5 Pro", "context": "1M"},
-        {"name": "Gemini 2.5 Flash", "context": "1M"},
-        {"name": "Gemini 3", "context": "1M", "note": "preview"}
-      ],
-      "coding_features": ["All Standard features + IP indemnity", "Security scanning", "Source citations", "VPC controls", "SLA", "SOC/ISO"],
-      "notes": "120 RPM / 2,000 RPD; customer code not used for training",
-      "url": "https://codeassist.google"
-    },
-    {
-      "company": "Amazon",
-      "product": "Q Developer",
+      "company": "Cognition",
+      "product": "Windsurf → Devin Desktop",
       "plan": "Free",
       "price_monthly": 0,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "default"},
-        {"name": "Claude Sonnet 3.7", "context": "200K"}
+        {"name": "SWE-1.6", "context": "—", "note": "in-house, reduced speed"},
+        {"name": "SWE-1.5 / SWE-1-mini", "context": "—"}
       ],
-      "coding_features": ["Code completions", "Chat (IDE/CLI)", "Agentic coding", "Security scanning", "Code transformation (Java/.NET, limited)"],
-      "notes": "50 agentic requests/mo; 1,000 LOC/mo code transformation",
-      "url": "https://aws.amazon.com/q/developer/"
+      "coding_features": ["Cascade agent (light quota)", "Unlimited Tab completion", "Inline edits", "MCP"],
+      "notes": "Windsurf renamed Devin Desktop (Jun 2026) after Cognition acquisition; token-budget quotas since Mar 2026",
+      "url": "https://devin.ai/pricing"
     },
     {
-      "company": "Amazon",
-      "product": "Q Developer",
+      "company": "Cognition",
+      "product": "Windsurf → Devin Desktop",
       "plan": "Pro",
-      "price_monthly": 19,
+      "price_monthly": 20,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "default"},
-        {"name": "Claude Sonnet 3.7", "context": "200K"}
+        {"name": "SWE-1.6", "context": "—", "note": "free, unlimited"},
+        {"name": "Claude Sonnet 5 / Opus 4.8", "context": "1M", "note": "counts vs quota"},
+        {"name": "GPT-5.5", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"}
       ],
-      "coding_features": ["All Free features + higher limits", "IP indemnity", "Admin dashboard", "Code transformation (4K LOC/mo)", ".NET transformation (1M LOC)"],
-      "notes": "~1,000 agentic requests/mo; 20× vs Free",
-      "url": "https://aws.amazon.com/q/developer/"
+      "coding_features": ["Cascade agent", "Cloud sessions (background dev)", "Unlimited Tab", "Devin API", "DeepWiki", "MCP"],
+      "notes": "Raised from $15 in Mar 2026; daily + weekly token budget; free SWE-1.6 doesn't count",
+      "url": "https://devin.ai/pricing"
     },
     {
-      "company": "CommandCode AI",
-      "product": "Command Code",
-      "plan": "Go",
-      "price_monthly": 1,
-      "price_annual": null,
-      "models": [
-        {"name": "DeepSeek V4 Pro", "context": "1M", "input_price": 0.435, "output_price": 0.87, "cache_price": 0.0036, "note": "4× usage deal"},
-        {"name": "DeepSeek V4 Flash", "context": "1M", "input_price": 0.14, "output_price": 0.28, "cache_price": 0.0028},
-        {"name": "Kimi K2.7 Code", "context": "1M", "input_price": 0.95, "output_price": 4.00, "cache_price": 0.19},
-        {"name": "GLM-5.2", "context": "1M", "input_price": 1.40, "output_price": 4.40, "cache_price": 0.26},
-        {"name": "MiniMax M3", "context": "1M", "input_price": 0.30, "output_price": 1.20, "cache_price": 0.06, "note": "2× ≤512K ctx"},
-        {"name": "MiMo V2.5 Pro", "context": "1M", "input_price": 0.435, "output_price": 0.87, "cache_price": 0.0036, "note": "up to 99% off"},
-        {"name": "MiMo V2.5", "context": "1M", "input_price": 0.14, "output_price": 0.28, "cache_price": 0.0028, "note": "up to 98% off"},
-        {"name": "Qwen 3.7 Max", "context": "1M", "input_price": 1.25, "output_price": 3.75, "cache_price": 0.25, "note": "2× deal"},
-        {"name": "Nemotron 3 Ultra", "context": "1M", "input_price": 0.37, "output_price": 1.08, "cache_price": 0.14, "note": "2.3× deal"},
-        {"name": "Step 3.7 Flash", "context": "1M", "input_price": 0.20, "output_price": 1.15, "cache_price": 0.04}
-      ],
-      "coding_features": ["taste-1 learning", "Zero data retention", "23 open-source models", "Top-up credits (never expire)"],
-      "notes": "$10 credits/mo; open-source only; permanent deals on DeepSeek/Nemotron/MiMo",
-      "url": "https://commandcode.ai"
-    },
-    {
-      "company": "CommandCode AI",
-      "product": "Command Code",
-      "plan": "Pro",
-      "price_monthly": 15,
-      "price_annual": null,
-      "models": [
-        {"name": "Claude Fable 5", "context": "1M", "input_price": 10.00, "output_price": 50.00, "cache_price": 1.00},
-        {"name": "Claude Opus 4.8", "context": "1M", "input_price": 5.00, "output_price": 25.00, "cache_price": 0.50},
-        {"name": "Claude Sonnet 4.6", "context": "1M", "input_price": 3.00, "output_price": 15.00, "cache_price": 0.30},
-        {"name": "Claude Haiku 4.5", "context": "1M", "input_price": 1.00, "output_price": 5.00, "cache_price": 0.10},
-        {"name": "GPT-5.5", "context": "1M", "input_price": 5.00, "output_price": 30.00, "cache_price": 0.50},
-        {"name": "GPT-5.4", "context": "1M", "input_price": 2.50, "output_price": 15.00, "cache_price": 0.25},
-        {"name": "GPT-5.4 Mini", "context": "1M", "input_price": 0.75, "output_price": 4.50, "cache_price": 0.075},
-        {"name": "GPT-5.3 Codex", "context": "1M", "input_price": 2.00, "output_price": 8.00, "cache_price": 0.50},
-        {"name": "Gemini 3.5 Flash", "context": "1M", "input_price": 1.50, "output_price": 9.00, "cache_price": 0.15},
-        {"name": "Fugu Ultra", "context": "1M", "input_price": 5.00, "output_price": 30.00, "cache_price": 0.50},
-        {"name": "+ all Go open-source models", "context": "1M"}
-      ],
-      "coding_features": ["All Go features + premium models", "Claude Fable/Opus/GPT-5", "Per-request cost analytics", "37 total models"],
-      "notes": "$30 credits/mo; zero markup on API rates; ZDR on 99% models",
-      "url": "https://commandcode.ai"
-    },
-    {
-      "company": "CommandCode AI",
-      "product": "Command Code",
-      "plan": "Max 10×",
-      "price_monthly": 100,
-      "price_annual": null,
-      "models": [
-        {"name": "All Pro models", "context": "Up to 1M"}
-      ],
-      "coding_features": ["All Pro features + higher limits", "Priority support"],
-      "notes": "$150 credits/mo; ~110K requests; priority support",
-      "url": "https://commandcode.ai"
-    },
-    {
-      "company": "CommandCode AI",
-      "product": "Command Code",
-      "plan": "Max 20×",
+      "company": "Cognition",
+      "product": "Windsurf → Devin Desktop",
+      "plan": "Max",
       "price_monthly": 200,
       "price_annual": null,
       "models": [
-        {"name": "All Pro models", "context": "Up to 1M"}
+        {"name": "SWE-1.6", "context": "—", "note": "free, unlimited"},
+        {"name": "Claude Sonnet 5 / Opus 4.8", "context": "1M"},
+        {"name": "GPT-5.5", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"}
       ],
-      "coding_features": ["All Pro features + highest limits", "Top priority support"],
-      "notes": "$300 credits/mo; ~200K requests; top priority support",
-      "url": "https://commandcode.ai"
+      "coding_features": ["Full Devin Desktop", "Cloud sessions", "Unlimited concurrent sessions", "Cascade agent"],
+      "notes": "Highest daily/weekly quotas; unlimited concurrent sessions",
+      "url": "https://devin.ai/pricing"
     },
     {
-      "company": "Z.ai (Zhipu AI)",
-      "product": "GLM Coding Plan",
-      "plan": "Lite",
-      "price_monthly": 18,
-      "price_annual": null,
-      "models": [
-        {"name": "GLM-5.2", "context": "1M", "input_price": 1.40, "output_price": 4.40, "note": "flagship, 2×-3× quota multiplier"},
-        {"name": "GLM-5-Turbo", "context": "1M", "note": "faster, 2×-3× quota"},
-        {"name": "GLM-4.7", "context": "128K", "note": "daily tasks, 1× quota"}
-      ],
-      "coding_features": ["Claude Code / Cline / Roo Code support", "Open Code / Crush / Goose", "1M context (GLM-5.2)", "MIT open weights (GLM-5.2)"],
-      "notes": "Prompt-based (~80/5h); GLM-5.2 2× off-peak / 3× peak quota; 1× promo until Sept 2026",
-      "url": "https://z.ai"
-    },
-    {
-      "company": "Z.ai (Zhipu AI)",
-      "product": "GLM Coding Plan",
-      "plan": "Pro",
-      "price_monthly": 72,
-      "price_annual": null,
-      "models": [
-        {"name": "GLM-5.2", "context": "1M", "input_price": 1.40, "output_price": 4.40},
-        {"name": "GLM-5-Turbo", "context": "1M"},
-        {"name": "GLM-4.7", "context": "128K"}
-      ],
-      "coding_features": ["All Lite features + higher limits", "1-2 concurrent projects"],
-      "notes": "~400 prompts/5h; 5× Lite limits; full-time individual developers",
-      "url": "https://z.ai"
-    },
-    {
-      "company": "Z.ai (Zhipu AI)",
-      "product": "GLM Coding Plan",
-      "plan": "Max",
-      "price_monthly": 160,
-      "price_annual": null,
-      "models": [
-        {"name": "GLM-5.2", "context": "1M", "input_price": 1.40, "output_price": 4.40},
-        {"name": "GLM-5-Turbo", "context": "1M"},
-        {"name": "GLM-4.7", "context": "128K"}
-      ],
-      "coding_features": ["All Pro features + highest limits", "2+ concurrent projects", "Heavy agentic & long-context work"],
-      "notes": "~1,600 prompts/5h; 20× Lite limits; heavy agentic coding",
-      "url": "https://z.ai"
-    },
-    {
-      "company": "Xiaomi",
-      "product": "MiMo",
-      "plan": "Open-Source / API",
+      "company": "Replit",
+      "product": "Replit AI",
+      "plan": "Starter",
       "price_monthly": 0,
       "price_annual": null,
       "models": [
-        {"name": "MiMo-V2.5-Pro", "context": "1M", "note": "1T+ params, proprietary API"},
-        {"name": "MiMo-V2.5", "context": "1M"},
-        {"name": "MiMo-V2-Pro", "context": "1M", "note": "1T params, API-only"},
-        {"name": "MiMo-V2-Flash", "context": "256K", "input_price": 0.10, "output_price": 0.30, "note": "309B MoE, MIT license"},
-        {"name": "MiMo-7B-RL", "context": "32K", "note": "MIT license, matches o1-mini"}
+        {"name": "Replit Agent", "context": "—", "note": "Claude-powered; Economy/Power modes"}
       ],
-      "coding_features": ["MiMo Code (coding agent, early access)", "SWE-Bench 73.4% (V2-Flash)", "Claw-Eval 75.7 (V2-Pro)", "MIT license (7B, V2-Flash)"],
-      "notes": "V2-Pro matches Claude Opus 4.8 at lower cost; MiMo Code early access",
-      "url": "https://mimo.xiaomi.com"
+      "coding_features": ["Agent (limited)", "Cloud IDE", "Built-in database", "1 published project", "Checkpoints"],
+      "notes": "Free daily Agent credits (light); Agent runs on Anthropic Claude (Opus 4.7)",
+      "url": "https://replit.com/pricing"
     },
     {
       "company": "Replit",
@@ -581,61 +548,749 @@
       "price_monthly": 25,
       "price_annual": 240,
       "models": [
-        {"name": "Replit Agent", "context": "200K", "note": "proprietary"},
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "GPT-4o", "context": "128K"}
+        {"name": "Replit Agent", "context": "—", "note": "Claude-powered"}
       ],
-      "coding_features": ["Replit Agent (build apps from prompt)", "Cloud IDE", "Instant deployment", "Collaboration", "Database & storage"],
-      "notes": "Unlimited Agent usage; compute (CPU/RAM) limits apply; cloud IDE included",
-      "url": "https://replit.com"
+      "coding_features": ["Full Agent (Economy + Power modes)", "Unlimited apps/publishing", "Deployments", "2 parallel agents", "MCP"],
+      "notes": "$25/mo usage credits; up to 5 collaborators; $20/mo billed annually",
+      "url": "https://replit.com/pricing"
     },
     {
-      "company": "Windsurf (Codeium)",
-      "product": "Windsurf IDE",
+      "company": "Replit",
+      "product": "Replit AI",
+      "plan": "Pro",
+      "price_monthly": 100,
+      "price_annual": 1140,
+      "models": [
+        {"name": "Replit Agent", "context": "—", "note": "most powerful models; Turbo mode"}
+      ],
+      "coding_features": ["Agent + Turbo mode", "10 parallel agents", "Pooled team credits", "28-day DB rollbacks", "Priority support"],
+      "notes": "$100/mo credits (tiered $100-$4,000); up to 15 builders; replaced retired Teams tier (Feb 2026)",
+      "url": "https://replit.com/blog/pro-plan"
+    },
+    {
+      "company": "Amazon",
+      "product": "Kiro",
       "plan": "Free",
       "price_monthly": 0,
       "price_annual": null,
       "models": [
-        {"name": "Windsurf Cascade (base)", "context": "200K"},
-        {"name": "GPT-4o mini", "context": "128K"}
+        {"name": "Claude Sonnet 4.5", "context": "200K"},
+        {"name": "Auto", "context": "—", "note": "routes across models"},
+        {"name": "Qwen3 Coder Next / DeepSeek V3.2 / MiniMax", "context": "—", "note": "open-weight"}
       ],
-      "coding_features": ["Cascade (agentic chat)", "Code completions", "Supercomplete", "Multi-file editing"],
-      "notes": "Limited premium model access; basic Cascade features",
-      "url": "https://windsurf.com"
+      "coding_features": ["Spec-driven agentic IDE + CLI", "Auto agent"],
+      "notes": "Kiro is the successor to Amazon Q Developer (paid Q closed to new signups May 2026); 50 credits/mo",
+      "url": "https://kiro.dev/pricing/"
     },
     {
-      "company": "Windsurf (Codeium)",
-      "product": "Windsurf IDE",
+      "company": "Amazon",
+      "product": "Kiro",
+      "plan": "Pro",
+      "price_monthly": 20,
+      "price_annual": null,
+      "models": [
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Auto", "context": "—", "note": "default router"}
+      ],
+      "coding_features": ["Spec-driven development", "Auto agent (multi-model)", "Agentic IDE + CLI"],
+      "notes": "1,000 credits/mo; credit add-ons $0.04 each; model multipliers vary",
+      "url": "https://kiro.dev/pricing/"
+    },
+    {
+      "company": "Amazon",
+      "product": "Kiro",
+      "plan": "Pro+",
+      "price_monthly": 40,
+      "price_annual": null,
+      "models": [
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Auto", "context": "—"}
+      ],
+      "coding_features": ["All Pro features", "Higher credit allotment"],
+      "notes": "2,000 credits/mo",
+      "url": "https://kiro.dev/pricing/"
+    },
+    {
+      "company": "Amazon",
+      "product": "Kiro",
+      "plan": "Pro Max",
+      "price_monthly": 100,
+      "price_annual": null,
+      "models": [
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Auto", "context": "—"}
+      ],
+      "coding_features": ["All Pro features", "5,000 credits/mo"],
+      "notes": "5,000 credits/mo",
+      "url": "https://kiro.dev/pricing/"
+    },
+    {
+      "company": "Amazon",
+      "product": "Kiro",
+      "plan": "Power",
+      "price_monthly": 200,
+      "price_annual": null,
+      "models": [
+        {"name": "Claude Opus 4.8", "context": "1M"},
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Auto", "context": "—"}
+      ],
+      "coding_features": ["All Pro features", "10,000 credits/mo", "Highest limits"],
+      "notes": "10,000 credits/mo; Team plans add SAML/SCIM SSO & analytics",
+      "url": "https://kiro.dev/pricing/"
+    },
+    {
+      "company": "xAI",
+      "product": "Grok",
+      "plan": "X Premium",
+      "price_monthly": 8,
+      "price_annual": null,
+      "models": [
+        {"name": "Grok 4.3", "context": "1M", "note": "staged rollout"}
+      ],
+      "coding_features": ["Chat-based code help"],
+      "notes": "Entry paid tier; low caps; prices from secondary sources (x.ai blocks bots)",
+      "url": "https://x.ai/pricing"
+    },
+    {
+      "company": "xAI",
+      "product": "Grok",
+      "plan": "SuperGrok",
+      "price_monthly": 30,
+      "price_annual": 300,
+      "models": [
+        {"name": "Grok 4.3", "context": "1M", "note": "Think/Big Brain, DeepSearch"},
+        {"name": "Grok Build", "context": "256K", "note": "agentic coding CLI"}
+      ],
+      "coding_features": ["Grok Build coding CLI", "Agentic coding", "Parallel sub-agents"],
+      "notes": "~100 prompts/2h; Grok Build replaced grok-code-fast; Grok 5 not released",
+      "url": "https://x.ai/pricing"
+    },
+    {
+      "company": "xAI",
+      "product": "Grok",
+      "plan": "SuperGrok Heavy",
+      "price_monthly": 300,
+      "price_annual": null,
+      "models": [
+        {"name": "Grok 4.3", "context": "1M", "note": "full access"},
+        {"name": "Grok Build", "context": "256K", "note": "highest limits"}
+      ],
+      "coding_features": ["Highest Grok Build limits", "Multi-agent parallel execution", "Priority routing"],
+      "notes": "'Grok Heavy' multi-agent config; prices from secondary sources",
+      "url": "https://x.ai/pricing"
+    },
+    {
+      "company": "Mistral",
+      "product": "Le Chat (Vibe)",
+      "plan": "Free",
+      "price_monthly": 0,
+      "price_annual": null,
+      "models": [
+        {"name": "Mistral Medium 3.5", "context": "256K", "note": "limited"},
+        {"name": "Codestral 2", "context": "128K"}
+      ],
+      "coding_features": ["Basic in-chat coding", "Limited messages"],
+      "notes": "Vibe is Mistral's coding CLI; consumer app rebranded Le Chat (Vibe)",
+      "url": "https://mistral.ai/pricing/"
+    },
+    {
+      "company": "Mistral",
+      "product": "Le Chat (Vibe)",
+      "plan": "Pro",
+      "price_monthly": 14.99,
+      "price_annual": null,
+      "models": [
+        {"name": "Devstral 2", "context": "256K", "note": "agentic coding, powers Vibe CLI"},
+        {"name": "Mistral Medium 3.5", "context": "256K"},
+        {"name": "Codestral 2", "context": "128K", "note": "FIM/IDE autocomplete"}
+      ],
+      "coding_features": ["Vibe in CLI, IDE & remote", "Unlimited 'all-day' coding", "Remote coding agents", "Connectors (Notion/Slack/Linear)"],
+      "notes": "Ex-tax; expanded message allowances",
+      "url": "https://mistral.ai/pricing/"
+    },
+    {
+      "company": "Mistral",
+      "product": "Le Chat (Vibe)",
+      "plan": "Team",
+      "price_monthly": 24.99,
+      "price_annual": 240,
+      "models": [
+        {"name": "Devstral 2", "context": "256K"},
+        {"name": "Mistral Medium 3.5", "context": "256K"},
+        {"name": "Codestral 2", "context": "128K"}
+      ],
+      "coding_features": ["Vibe CLI/IDE", "Shared libraries", "Collaborative workspace", "Admin controls"],
+      "notes": "$19.99/user/mo billed annually; min $50/mo; 30GB storage/user",
+      "url": "https://mistral.ai/pricing/"
+    },
+    {
+      "company": "Z.ai (Zhipu AI)",
+      "product": "GLM Coding Plan",
+      "plan": "Lite",
+      "price_monthly": 18,
+      "price_annual": 151.2,
+      "models": [
+        {"name": "GLM-5.2", "context": "1M", "note": "flagship, 2×-3× quota; MIT open weights"},
+        {"name": "GLM-5-Turbo", "context": "1M", "note": "faster, 2×-3× quota"},
+        {"name": "GLM-4.7", "context": "128K", "note": "1× quota"}
+      ],
+      "coding_features": ["Claude Code / Cline / OpenCode", "ZCode CLI", "Built-in MCP web-search", "~80 prompts/5h, ~400/wk"],
+      "notes": "GLM-5.2 released Jun 2026; ~30% intro promo ($12.60); off-peak 1× promo through Sept 2026; old $3 Lite discontinued",
+      "url": "https://z.ai/subscribe"
+    },
+    {
+      "company": "Z.ai (Zhipu AI)",
+      "product": "GLM Coding Plan",
+      "plan": "Pro",
+      "price_monthly": 72,
+      "price_annual": 604.8,
+      "models": [
+        {"name": "GLM-5.2", "context": "1M"},
+        {"name": "GLM-5-Turbo", "context": "1M"},
+        {"name": "GLM-4.7", "context": "128K"}
+      ],
+      "coding_features": ["All Lite features + higher limits", "~400 prompts/5h, ~2,000/wk", "1,000 MCP calls/mo"],
+      "notes": "5× Lite limits; full-time individual developers",
+      "url": "https://z.ai/subscribe"
+    },
+    {
+      "company": "Z.ai (Zhipu AI)",
+      "product": "GLM Coding Plan",
+      "plan": "Max",
+      "price_monthly": 160,
+      "price_annual": 1344,
+      "models": [
+        {"name": "GLM-5.2", "context": "1M"},
+        {"name": "GLM-5-Turbo", "context": "1M"},
+        {"name": "GLM-4.7", "context": "128K"}
+      ],
+      "coding_features": ["All Pro features + highest limits", "~1,600 prompts/5h, ~8,000/wk", "4,000 MCP calls/mo"],
+      "notes": "20× Lite limits; heavy agentic & long-context work",
+      "url": "https://z.ai/subscribe"
+    },
+    {
+      "company": "Moonshot AI",
+      "product": "Kimi Code",
+      "plan": "Moderato",
+      "price_monthly": 19,
+      "price_annual": 180,
+      "models": [
+        {"name": "Kimi K2.7-Code", "context": "256K", "note": "1× credits; MoE ~1T/32B active"}
+      ],
+      "coding_features": ["Anthropic-compatible endpoint", "kimi-code CLI", "Claude Code / Cline / RooCode / OpenCode", "2 concurrent agents"],
+      "notes": "Entry coding tier; weekly-refreshed quotas; K2.7-Code released Jun 2026",
+      "url": "https://www.kimi.com/code"
+    },
+    {
+      "company": "Moonshot AI",
+      "product": "Kimi Code",
+      "plan": "Allegretto",
+      "price_monthly": 39,
+      "price_annual": 372,
+      "models": [
+        {"name": "Kimi K2.7-Code", "context": "256K"}
+      ],
+      "coding_features": ["All Moderato features", "Kimi Claw (cloud deploy)", "2 concurrent agents"],
+      "notes": "Higher weekly quotas",
+      "url": "https://www.kimi.com/code"
+    },
+    {
+      "company": "Moonshot AI",
+      "product": "Kimi Code",
+      "plan": "Allegro",
+      "price_monthly": 99,
+      "price_annual": 948,
+      "models": [
+        {"name": "Kimi K2.7-Code", "context": "256K"}
+      ],
+      "coding_features": ["360 agent credits", "4 concurrent agents", "Kimi Claw"],
+      "notes": "For full-time developers",
+      "url": "https://www.kimi.com/code"
+    },
+    {
+      "company": "Moonshot AI",
+      "product": "Kimi Code",
+      "plan": "Vivace",
+      "price_monthly": 199,
+      "price_annual": 1908,
+      "models": [
+        {"name": "Kimi K2.7-Code", "context": "256K", "note": "30× credits"}
+      ],
+      "coding_features": ["30× Kimi Code credits", "Agent Swarm (up to 300 parallel subagents)", "4 concurrent agents"],
+      "notes": "Heaviest agentic tier",
+      "url": "https://www.kimi.com/code"
+    },
+    {
+      "company": "MiniMax",
+      "product": "Token Plan",
+      "plan": "Plus",
+      "price_monthly": 20,
+      "price_annual": null,
+      "models": [
+        {"name": "MiniMax-M3", "context": "1M", "note": "flagship; ≤512K standard billing"}
+      ],
+      "coding_features": ["Anthropic-compatible endpoint", "MiniMax Code CLI", "Claude Code / Cursor / Cline", "~3-4 concurrent agents", "MCP"],
+      "notes": "M3 released Jun 2026; shared pool across text/image/speech; 5h + weekly windows",
+      "url": "https://platform.minimax.io/subscribe/token-plan"
+    },
+    {
+      "company": "MiniMax",
+      "product": "Token Plan",
+      "plan": "Max",
+      "price_monthly": 50,
+      "price_annual": null,
+      "models": [
+        {"name": "MiniMax-M3", "context": "1M"}
+      ],
+      "coding_features": ["All Plus features", "~4-5 concurrent agents", "Daily agent coding"],
+      "notes": "For daily agent coding",
+      "url": "https://platform.minimax.io/subscribe/token-plan"
+    },
+    {
+      "company": "MiniMax",
+      "product": "Token Plan",
+      "plan": "Ultra",
+      "price_monthly": 120,
+      "price_annual": null,
+      "models": [
+        {"name": "MiniMax-M3", "context": "1M"}
+      ],
+      "coding_features": ["All Max features", "~6-7 concurrent agents", "Extended sessions"],
+      "notes": "Heavy/extended agent sessions",
+      "url": "https://platform.minimax.io/subscribe/token-plan"
+    },
+    {
+      "company": "Alibaba",
+      "product": "Qwen (Cloud Coding Plan)",
+      "plan": "Pro",
+      "price_monthly": 50,
+      "price_annual": null,
+      "models": [
+        {"name": "Qwen3.7-Max", "context": "1M", "note": "flagship"},
+        {"name": "Qwen3-Coder-Plus", "context": "1M"},
+        {"name": "Qwen3-Coder-Next", "context": "256K"},
+        {"name": "GLM-5 / Kimi K2.5 / MiniMax-M2.5", "context": "—", "note": "third-party included"}
+      ],
+      "coding_features": ["Claude Code / Qwen Code / Cline / Cursor (~14 tools)", "6,000 req/5h, 45,000/wk"],
+      "notes": "Only tier open to new subs; interactive use only (no batch/CI/agentic backend); Lite ~$10 discontinued Mar 2026",
+      "url": "https://www.alibabacloud.com/help/en/model-studio/coding-plan"
+    },
+    {
+      "company": "DeepSeek",
+      "product": "DeepSeek API",
+      "plan": "Pay-as-you-go",
+      "price_monthly": 0,
+      "price_annual": null,
+      "price_display": "PAYG<br>(API)",
+      "models": [
+        {"name": "DeepSeek-V4-Pro", "context": "1M", "note": "1.6T MoE; maps to claude-opus; MIT open weights"},
+        {"name": "DeepSeek-V4-Flash", "context": "1M", "note": "284B; maps to claude-sonnet/haiku"}
+      ],
+      "coding_features": ["Native Anthropic endpoint (Claude Code drop-in)", "Cline / Roo / Aider / OpenCode", "Native web search in Claude Code"],
+      "notes": "No subscription — prepaid token balance; V4 released Apr 2026; ~5M free tokens on signup; R2 not released",
+      "url": "https://api-docs.deepseek.com/quick_start/pricing"
+    },
+    {
+      "company": "Xiaomi",
+      "product": "MiMo",
+      "plan": "Open-Source / API",
+      "price_monthly": 0,
+      "price_annual": null,
+      "price_display": "Free / PAYG",
+      "models": [
+        {"name": "MiMo-V2.5-Pro", "context": "1M", "note": "~1T MoE; ~Claude Opus 4.6-level; open weights"},
+        {"name": "MiMo-V2.5", "context": "1M", "note": "native multimodal"},
+        {"name": "MiMo-V2-Flash", "context": "256K", "note": "78.6 SWE-Bench Verified"}
+      ],
+      "coding_features": ["Claude Code / OpenCode / Kilo scaffolds", "Long-horizon agentic execution (1,000+ tool calls)", "Repo understanding", "Code review"],
+      "notes": "Pay-as-you-go API + open weights; V2.5-Pro released Apr 2026; up to 99% off promo pricing",
+      "url": "https://mimo.xiaomi.com/mimo-v2-5-pro"
+    },
+    {
+      "company": "Cerebras",
+      "product": "Cerebras Code",
+      "plan": "Pro",
+      "price_monthly": 50,
+      "price_annual": null,
+      "models": [
+        {"name": "Qwen3-Coder-480B", "context": "131K", "note": "~2,000 tok/s"},
+        {"name": "GLM-4.6", "context": "128K"}
+      ],
+      "coding_features": ["High-volume 'vibe coding'", "OpenAI-compatible endpoint", "Claude Code / Cline / Roo"],
+      "notes": "24M tokens/day; ultra-fast inference on Cerebras hardware; launched May 2026",
+      "url": "https://www.cerebras.ai/code"
+    },
+    {
+      "company": "Cerebras",
+      "product": "Cerebras Code",
+      "plan": "Max",
+      "price_monthly": 200,
+      "price_annual": null,
+      "models": [
+        {"name": "Qwen3-Coder-480B", "context": "131K", "note": "~2,000 tok/s"},
+        {"name": "GLM-4.6", "context": "128K"}
+      ],
+      "coding_features": ["All Pro features", "5× daily token budget"],
+      "notes": "120M tokens/day; heaviest high-throughput coding",
+      "url": "https://www.cerebras.ai/code"
+    },
+    {
+      "company": "CommandCode AI",
+      "product": "Command Code",
+      "plan": "Go",
+      "price_monthly": 1,
+      "price_annual": null,
+      "models": [
+        {"name": "DeepSeek V4 Pro", "context": "1M", "note": "~75% off (~4× deal)"},
+        {"name": "DeepSeek V4 Flash", "context": "1M", "note": "default model"},
+        {"name": "Kimi K2.7 Code", "context": "256K"},
+        {"name": "GLM-5.2", "context": "1M"},
+        {"name": "MiniMax M3", "context": "1M", "note": "~62.5% off"},
+        {"name": "MiMo V2.5 Pro", "context": "1M", "note": "up to 99% off"},
+        {"name": "Qwen 3.7 Max", "context": "1M"},
+        {"name": "Nemotron 3 Ultra / Step 3.5 Flash", "context": "1M"}
+      ],
+      "coding_features": ["Full agent (plan mode, checkpoints, sub-agents)", "Zero data retention", "Open-source models only", "Top-up credits never expire"],
+      "notes": "$10 credits/mo (~15K req); permanent deals on DeepSeek/MiMo/MiniMax; 5h cap = 30% monthly, weekly = 60%",
+      "url": "https://commandcode.ai/pricing"
+    },
+    {
+      "company": "CommandCode AI",
+      "product": "Command Code",
       "plan": "Pro",
       "price_monthly": 15,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Opus 4.8", "context": "200K"},
-        {"name": "GPT-4o", "context": "128K"},
-        {"name": "Gemini 2.5 Pro", "context": "1M"},
-        {"name": "Cascade (full)", "context": "200K", "note": "proprietary agent"}
+        {"name": "Claude Sonnet 5", "context": "1M"},
+        {"name": "Claude Haiku 4.5", "context": "200K"},
+        {"name": "GPT-5.5 / GPT-5.4", "context": "1M"},
+        {"name": "GPT-5.3 Codex", "context": "1M"},
+        {"name": "Gemini 3.5 Flash", "context": "1M"},
+        {"name": "+ all Go open-source models", "context": "1M"}
       ],
-      "coding_features": ["Cascade (full agent)", "Supercomplete", "Flex AI", "Multi-file editing", "Terminal integration"],
-      "notes": "500 user prompts/mo + 1,500 flow credits; premium model access",
-      "url": "https://windsurf.com"
+      "coding_features": ["All Go features + premium models", "Per-request cost analytics", "Zero markup on API rates"],
+      "notes": "$30 credits/mo (~25K req); excludes Opus 4.8 & Fable 5 (Max only); ZDR on 99% of models",
+      "url": "https://commandcode.ai/pricing"
     },
     {
-      "company": "Windsurf (Codeium)",
-      "product": "Windsurf IDE",
-      "plan": "Pro Ultimate",
-      "price_monthly": 60,
+      "company": "CommandCode AI",
+      "product": "Command Code",
+      "plan": "Max 10×",
+      "price_monthly": 100,
       "price_annual": null,
       "models": [
-        {"name": "Claude Sonnet 4.6", "context": "200K"},
-        {"name": "Claude Opus 4.8", "context": "200K"},
-        {"name": "GPT-4o", "context": "128K"},
-        {"name": "Gemini 2.5 Pro", "context": "1M"},
-        {"name": "Cascade (full)", "context": "200K"}
+        {"name": "All Pro models + Claude Opus 4.8 & Fable 5", "context": "Up to 1M"}
       ],
-      "coding_features": ["All Pro features + higher limits", "Unlimited premium models", "Priority support"],
-      "notes": "2,000 user prompts/mo + higher flow credits; unlimited premium models",
-      "url": "https://windsurf.com"
+      "coding_features": ["All Pro features + higher limits", "Opus 4.8 & Fable 5", "Priority support"],
+      "notes": "$150 credits/mo (~110K req)",
+      "url": "https://commandcode.ai/pricing"
+    },
+    {
+      "company": "CommandCode AI",
+      "product": "Command Code",
+      "plan": "Max 20×",
+      "price_monthly": 200,
+      "price_annual": null,
+      "models": [
+        {"name": "All Pro models + Claude Opus 4.8 & Fable 5", "context": "Up to 1M"}
+      ],
+      "coding_features": ["All Pro features + highest limits", "Top priority support"],
+      "notes": "$300 credits/mo (~200K req)",
+      "url": "https://commandcode.ai/pricing"
+    },
+    {
+      "company": "JetBrains",
+      "product": "AI (Assistant + Junie)",
+      "plan": "AI Free",
+      "price_monthly": 0,
+      "price_annual": null,
+      "models": [
+        {"name": "Local models (Ollama/LM Studio)", "context": "—", "note": "unlimited"},
+        {"name": "Cloud models", "context": "—", "note": "limited to 3 credits/30d"}
+      ],
+      "coding_features": ["Junie agent (limited)", "AI Assistant chat/completion", "Local model support"],
+      "notes": "3 credits/30 days (1 credit = $1 cloud usage); no top-up",
+      "url": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html"
+    },
+    {
+      "company": "JetBrains",
+      "product": "AI (Assistant + Junie)",
+      "plan": "AI Pro",
+      "price_monthly": 10,
+      "price_annual": 100,
+      "models": [
+        {"name": "Claude Opus 4.7 / Sonnet 4.6", "context": "1M"},
+        {"name": "GPT-5.5 / GPT-5.4", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"},
+        {"name": "Grok 4.3", "context": "1M"}
+      ],
+      "coding_features": ["Junie agent", "AI Assistant", "Full frontier model pool", "Top-up available"],
+      "notes": "10 credits/30 days; Junie + AI Assistant share one credit pool",
+      "url": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html"
+    },
+    {
+      "company": "JetBrains",
+      "product": "AI (Assistant + Junie)",
+      "plan": "AI Ultimate",
+      "price_monthly": 30,
+      "price_annual": null,
+      "models": [
+        {"name": "Claude Opus 4.7 / Sonnet 4.6", "context": "1M"},
+        {"name": "GPT-5.5", "context": "1M"},
+        {"name": "Gemini 3.1 Pro", "context": "1M"}
+      ],
+      "coding_features": ["All Pro features", "Higher volume / priority"],
+      "notes": "35 credits/30 days",
+      "url": "https://www.jetbrains.com/help/ai-assistant/licensing-and-subscriptions.html"
+    },
+    {
+      "company": "Warp",
+      "product": "Warp Terminal",
+      "plan": "Free",
+      "price_monthly": 0,
+      "price_annual": null,
+      "models": [
+        {"name": "Frontier models (BYO key)", "context": "—", "note": "limited cloud agents"}
+      ],
+      "coding_features": ["BYO inference", "Limited cloud agents", "Warp Drive"],
+      "notes": "Credit system; reload credits roll over up to 1yr",
+      "url": "https://www.warp.dev/pricing"
+    },
+    {
+      "company": "Warp",
+      "product": "Warp Terminal",
+      "plan": "Build",
+      "price_monthly": 20,
+      "price_annual": 216,
+      "models": [
+        {"name": "Frontier OpenAI / Anthropic / Google", "context": "—", "note": "provider-selectable"}
+      ],
+      "coding_features": ["Full Warp Agent", "Unlimited Warp Drive", "Codebase indexing", "Multi-agent"],
+      "notes": "1,500 credits/mo; $18/mo billed annually",
+      "url": "https://www.warp.dev/pricing"
+    },
+    {
+      "company": "Warp",
+      "product": "Warp Terminal",
+      "plan": "Max",
+      "price_monthly": 200,
+      "price_annual": 2160,
+      "models": [
+        {"name": "Frontier OpenAI / Anthropic / Google", "context": "—"}
+      ],
+      "coding_features": ["All Build features", "18,000 credits/mo"],
+      "notes": "$180/mo billed annually",
+      "url": "https://www.warp.dev/pricing"
+    },
+    {
+      "company": "Augment Code",
+      "product": "Augment",
+      "plan": "Indie",
+      "price_monthly": 20,
+      "price_annual": null,
+      "models": [
+        {"name": "Claude Sonnet 4.6", "context": "—", "note": "baseline, 293 credits/task"},
+        {"name": "Claude Opus 4.7", "context": "—", "note": "488 credits/task"},
+        {"name": "Gemini 3.1 Pro / GPT-5.x", "context": "—"}
+      ],
+      "coding_features": ["Cosmos agent", "CLI", "MCP", "Codebase context engine"],
+      "notes": "40,000 credits/mo; 1 user; reset monthly, no rollover",
+      "url": "https://www.augmentcode.com/pricing"
+    },
+    {
+      "company": "Augment Code",
+      "product": "Augment",
+      "plan": "Standard",
+      "price_monthly": 60,
+      "price_annual": 720,
+      "models": [
+        {"name": "Claude Sonnet 4.6", "context": "—"},
+        {"name": "Claude Opus 4.7", "context": "—"},
+        {"name": "Gemini 3.1 Pro / GPT-5.x", "context": "—"}
+      ],
+      "coding_features": ["Cosmos agent", "CLI", "MCP", "Up to 20 users pooled"],
+      "notes": "130,000 credits/seat/mo",
+      "url": "https://www.augmentcode.com/pricing"
+    },
+    {
+      "company": "Augment Code",
+      "product": "Augment",
+      "plan": "Max",
+      "price_monthly": 200,
+      "price_annual": 2400,
+      "models": [
+        {"name": "Claude Opus 4.7 / Sonnet 4.6", "context": "—"},
+        {"name": "Gemini 3.1 Pro / GPT-5.x", "context": "—"}
+      ],
+      "coding_features": ["Remote Agents", "CLI automation", "Highest credits"],
+      "notes": "450,000 credits/seat/mo",
+      "url": "https://www.augmentcode.com/pricing"
+    },
+    {
+      "company": "Zed",
+      "product": "Zed Editor",
+      "plan": "Free",
+      "price_monthly": 0,
+      "price_annual": null,
+      "models": [
+        {"name": "BYO API keys", "context": "—", "note": "unlimited with own keys"}
+      ],
+      "coding_features": ["2,000 edit predictions", "Agentic editing (BYO models)"],
+      "notes": "No hosted models included",
+      "url": "https://zed.dev/pricing"
+    },
+    {
+      "company": "Zed",
+      "product": "Zed Editor",
+      "plan": "Pro",
+      "price_monthly": 10,
+      "price_annual": null,
+      "models": [
+        {"name": "Claude Opus 4.8 / Sonnet 5", "context": "1M"},
+        {"name": "GPT-5.5 / GPT-5.3 Codex", "context": "400K"},
+        {"name": "Gemini 3.5 Flash", "context": "1M"}
+      ],
+      "coding_features": ["Unlimited edit predictions", "Hosted models", "Agentic editing"],
+      "notes": "$5 hosted-token credits/mo included, overage at API +10%; dropped to $10 May 2026",
+      "url": "https://zed.dev/pricing"
+    },
+    {
+      "company": "Factory",
+      "product": "Droid",
+      "plan": "Pro",
+      "price_monthly": 20,
+      "price_annual": null,
+      "models": [
+        {"name": "Frontier + open-weight (GPT-5.x, Claude Opus/Sonnet, Gemini)", "context": "—", "note": "full list in-app"}
+      ],
+      "coding_features": ["Cloud + local background agents", "Droid CLI / Desktop", "SDK"],
+      "notes": "Token/usage-based; $10 min top-up (non-expiring); no free tier",
+      "url": "https://factory.ai/pricing"
+    },
+    {
+      "company": "Factory",
+      "product": "Droid",
+      "plan": "Plus",
+      "price_monthly": 100,
+      "price_annual": null,
+      "models": [
+        {"name": "Frontier + open-weight models", "context": "—"}
+      ],
+      "coding_features": ["~5× Pro usage", "Droid Computers (cloud sandboxes)"],
+      "notes": "~5× Pro usage",
+      "url": "https://factory.ai/pricing"
+    },
+    {
+      "company": "Factory",
+      "product": "Droid",
+      "plan": "Max",
+      "price_monthly": 200,
+      "price_annual": null,
+      "models": [
+        {"name": "Frontier + open-weight models", "context": "—"}
+      ],
+      "coding_features": ["~10× Pro usage", "Early access"],
+      "notes": "~10× Pro usage",
+      "url": "https://factory.ai/pricing"
+    },
+    {
+      "company": "ByteDance",
+      "product": "Trae",
+      "plan": "Pro",
+      "price_monthly": 10,
+      "price_annual": null,
+      "models": [
+        {"name": "Claude Sonnet 4 / GPT-4o", "context": "—"},
+        {"name": "Gemini 2.5 Flash / Doubao-seed-1.6", "context": "—"}
+      ],
+      "coding_features": ["SOLO mode", "Agent", "Autocomplete", "10 concurrent cloud tasks", "BYO API key"],
+      "notes": "$20 basic usage; recommended tier; Lite $3 / Pro+ $30 / Ultra $100 also available",
+      "url": "https://www.trae.ai/pricing"
+    },
+    {
+      "company": "Tabnine",
+      "product": "Tabnine",
+      "plan": "Code Assistant",
+      "price_monthly": 39,
+      "price_annual": 468,
+      "models": [
+        {"name": "Claude / GPT / Gemini / Llama / Mistral", "context": "—", "note": "user-selectable"}
+      ],
+      "coding_features": ["Completions", "Full-function impl", "Chat", "All major IDEs", "Basic Context Engine"],
+      "notes": "Annual billing only; model-agnostic; no free/solo tier",
+      "url": "https://www.tabnine.com/pricing/"
+    },
+    {
+      "company": "Tabnine",
+      "product": "Tabnine",
+      "plan": "Agentic",
+      "price_monthly": 59,
+      "price_annual": 708,
+      "models": [
+        {"name": "Claude / GPT / Gemini / Llama / Mistral", "context": "—"}
+      ],
+      "coding_features": ["Autonomous agents (human-in-loop)", "Full Context Engine", "Tabnine CLI", "Code Review Agent", "MCP", "SSO"],
+      "notes": "Annual billing only; on-prem/air-gapped via Enterprise",
+      "url": "https://www.tabnine.com/pricing/"
+    },
+    {
+      "company": "Vercel",
+      "product": "v0",
+      "plan": "Team",
+      "price_monthly": 30,
+      "price_annual": null,
+      "models": [
+        {"name": "v0 Mini / Pro / Max", "context": "—", "note": "proprietary; base models undisclosed"}
+      ],
+      "coding_features": ["App builder", "Figma import", "v0 API", "Shared credit pool"],
+      "notes": "$30 credits/user + $2 free daily; Premium tier sunset (Team is replacement)",
+      "url": "https://v0.app/pricing"
+    },
+    {
+      "company": "Lovable",
+      "product": "Lovable",
+      "plan": "Pro",
+      "price_monthly": 25,
+      "price_annual": 250,
+      "models": [
+        {"name": "GPT-5.4 family", "context": "1M", "note": "abstracted"},
+        {"name": "Claude / Gemini 3.1 Flash Lite", "context": "—"}
+      ],
+      "coding_features": ["App builder", "Code mode", "Private projects", "Custom domains", "GitHub sync"],
+      "notes": "Starts 100 credits/mo (scalable to 10,000); annual saves ~17%",
+      "url": "https://lovable.dev/pricing"
+    },
+    {
+      "company": "StackBlitz",
+      "product": "Bolt.new",
+      "plan": "Pro",
+      "price_monthly": 25,
+      "price_annual": null,
+      "models": [
+        {"name": "Claude Sonnet 4.6", "context": "200K", "note": "default; 1M beta"},
+        {"name": "Claude Opus 4.6", "context": "200K", "note": "hard refactors"},
+        {"name": "Claude Haiku 4.5", "context": "200K", "note": "quick edits"}
+      ],
+      "coding_features": ["App builder", "Per-message model switching", "Custom domains", "No daily limits"],
+      "notes": "Starts 10M tokens/mo (scalable); paid tokens roll over ~2 months",
+      "url": "https://bolt.new/pricing"
+    },
+    {
+      "company": "Kilo",
+      "product": "Kilo Code",
+      "plan": "Kilo Pass (Starter)",
+      "price_monthly": 19,
+      "price_annual": 228,
+      "models": [
+        {"name": "500+ models via Kilo Gateway", "context": "—", "note": "provider list prices, no markup"}
+      ],
+      "coding_features": ["Open-source agent (VS Code/JetBrains)", "BYO key / Local / Gateway", "MCP", "60+ providers"],
+      "notes": "Converts payment to non-expiring credits (~$26.60 value) + bonus; Pro $49 / Expert $199 also available",
+      "url": "https://kilo.ai/pricing"
     }
   ]
 }

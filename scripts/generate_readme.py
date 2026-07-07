@@ -16,6 +16,8 @@ def load_data() -> list:
 
 
 def fmt_price(entry: dict) -> str:
+    if entry.get("price_display"):
+        return entry["price_display"]
     if entry["price_monthly"] == 0:
         return "Free"
     if entry["price_annual"]:
@@ -67,7 +69,11 @@ TEMPLATE = """# 💰 awesome-ai-subscriptions
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![License: CC0](https://img.shields.io/badge/License-CC0_1.0-lightgrey.svg)](http://creativecommons.org/publicdomain/zero/1.0/)
 
-A curated list of **AI coding subscription plans** from major providers. Compare pricing, supported models, and context windows across ChatGPT, Claude, Copilot, Cursor, Gemini Code Assist, Amazon Q, Command Code, Z.ai, Windsurf, Xiaomi MiMo, and more.
+A curated list of **AI coding subscription plans** from major providers. Compare pricing, supported models, and context windows across ChatGPT, Claude, Gemini, Copilot, Cursor, Grok, Mistral, Kiro, Devin, Z.ai GLM, Kimi, MiniMax, Qwen, DeepSeek, Cerebras, Command Code, and many more.
+
+Special focus on **first-party, high-volume "subsidized" coding plans** — cheap monthly subscriptions from the labs that build the models (Z.ai, Moonshot Kimi, MiniMax, Qwen, Cerebras, CommandCode) that give heavy usage of their own models, usually through a Claude Code–compatible endpoint.
+
+> Last reviewed: **July 2026**.
 
 ---
 
