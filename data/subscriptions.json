@@ -1294,7 +1294,65 @@
     },
     {
       "company": "Zyloo",
-      "product": "Zyloo Gateway",
+      "product": "Zyloo",
+      "plan": "PRO",
+      "price_monthly": null,
+      "price_annual": null,
+      "price_display": "$19/wk<br>(~$82/mo)",
+      "models": [
+        {"name": "GLM-5.2", "context": "1M", "note": "unlimited tokens"},
+        {"name": "DeepSeek-V4-Pro", "context": "1M", "note": "unlimited"},
+        {"name": "DeepSeek-V4-Flash", "context": "1M", "note": "unlimited"},
+        {"name": "MiniMax-M3", "context": "1M", "note": "unlimited"},
+        {"name": "Claude Sonnet 5", "context": "1M", "note": "50M token quota"},
+        {"name": "Claude Opus 4.8", "context": "1M", "note": "50M token quota"},
+        {"name": "+1 more model", "context": "—"}
+      ],
+      "coding_features": ["Claude Code / Aider / Qwen Code compatible", "In-plan models don't touch credit balance", "Streaming + tool calling + vision"],
+      "notes": "Weekly billing; card auto-renews, crypto/WeChat/Alipay/UPI single-period; capped models revert to PAYG after quota",
+      "url": "https://zyloo.io/subscription"
+    },
+    {
+      "company": "Zyloo",
+      "product": "Zyloo",
+      "plan": "PRO+",
+      "price_monthly": 99,
+      "price_annual": null,
+      "models": [
+        {"name": "GLM-5.2", "context": "1M", "note": "unlimited tokens"},
+        {"name": "GLM-5.1", "context": "205K", "note": "unlimited"},
+        {"name": "DeepSeek-V4-Pro", "context": "1M", "note": "unlimited"},
+        {"name": "DeepSeek-V4-Flash", "context": "1M", "note": "unlimited"},
+        {"name": "MiniMax-M3", "context": "1M", "note": "unlimited"},
+        {"name": "Claude Sonnet 5", "context": "1M", "note": "100M token quota"},
+        {"name": "+4 more models", "context": "—"}
+      ],
+      "coding_features": ["Claude Code / Aider / Qwen Code compatible", "In-plan models don't touch credit balance", "Streaming + tool calling + vision"],
+      "notes": "10 models total; capped models revert to PAYG after quota; non-included models bill per-token",
+      "url": "https://zyloo.io/subscription"
+    },
+    {
+      "company": "Zyloo",
+      "product": "Zyloo",
+      "plan": "ULTRA",
+      "price_monthly": 249,
+      "price_annual": null,
+      "models": [
+        {"name": "Claude Sonnet 5", "context": "1M", "note": "unlimited tokens"},
+        {"name": "Claude Opus 4.8", "context": "1M", "note": "unlimited"},
+        {"name": "Claude Opus 4.7", "context": "1M", "note": "unlimited"},
+        {"name": "GPT-5.6 Sol", "context": "1M", "note": "1B token quota"},
+        {"name": "GPT-5.6 Terra", "context": "1M", "note": "1B token quota"},
+        {"name": "GPT-5.6 Luna", "context": "1M", "note": "1B token quota"},
+        {"name": "+6 more models", "context": "—"}
+      ],
+      "coding_features": ["Claude Code / Aider / Qwen Code compatible", "Unlimited Claude Opus/Sonnet 5", "Streaming + tool calling + vision"],
+      "notes": "12 models total; top tier with unlimited Claude flagships; capped models revert to PAYG after quota",
+      "url": "https://zyloo.io/subscription"
+    },
+    {
+      "company": "Zyloo",
+      "product": "Zyloo",
       "plan": "Pay-as-you-go",
       "price_monthly": 0,
       "price_annual": null,
