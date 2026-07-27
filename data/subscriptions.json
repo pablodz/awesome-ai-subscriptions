@@ -1291,6 +1291,24 @@
       "coding_features": ["Open-source agent (VS Code/JetBrains)", "BYO key / Local / Gateway", "MCP", "60+ providers"],
       "notes": "Converts payment to non-expiring credits (~$26.60 value) + bonus; Pro $49 / Expert $199 also available",
       "url": "https://kilo.ai/pricing"
+    },
+    {
+      "company": "Zyloo",
+      "product": "Zyloo Gateway",
+      "plan": "Pay-as-you-go",
+      "price_monthly": 0,
+      "price_annual": null,
+      "price_display": "PAYG<br>(API)",
+      "models": [
+        {"name": "58+ models via unified gateway", "context": "1M", "note": "single OpenAI-compatible endpoint; smart routing + failover"},
+        {"name": "Claude Opus 5", "context": "1M", "note": "$5 / $25 per 1M tok in/out"},
+        {"name": "Claude Sonnet 5", "context": "1M", "note": "$1.20 / $7.50 per 1M tok"},
+        {"name": "GPT-5.6 Terra", "context": "1M", "note": "$2 / $14 per 1M tok"},
+        {"name": "Gemini 3.6 Flash", "context": "1M", "note": "$1.50 / $7.50 per 1M tok"}
+      ],
+      "coding_features": ["Claude Code / Aider / Qwen Code compatible", "Streaming + tool calling", "Vision + structured output", "58+ models (Anthropic/OpenAI/Google/Grok/DeepSeek/Kimi/GLM/Qwen/MiniMax/Mistral)"],
+      "notes": "No subscription — prepaid, billed to the cent per token; unused credit refundable within 14 days; pays via card, Apple/Google Pay, crypto, WeChat Pay, UPI",
+      "url": "https://zyloo.io/"
     }
   ]
 }

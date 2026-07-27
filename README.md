@@ -107,6 +107,7 @@ Special focus on **first-party, high-volume "subsidized" coding plans** — chea
 | 86 | **Lovable**<br>Lovable | Pro | $25/mo<br>($250/yr) | GPT-5.4 family · 1M *(abstracted)*<br>Claude / Gemini 3.1 Flash Lite · — |
 | 87 | **StackBlitz**<br>Bolt.new | Pro | $25/mo | Claude Sonnet 4.6 · 200K *(default; 1M beta)*<br>Claude Opus 4.6 · 200K *(hard refactors)*<br>Claude Haiku 4.5 · 200K *(quick edits)* |
 | 88 | **Kilo**<br>Kilo Code | Kilo Pass (Starter) | $19/mo<br>($228/yr) | 500+ models via Kilo Gateway · — *(provider list prices, no markup)* |
+| 89 | **Zyloo**<br>Zyloo Gateway | Pay-as-you-go | PAYG<br>(API) | 58+ models via unified gateway · 1M *(single OpenAI-compatible endpoint; smart routing + failover)*<br>Claude Opus 5 · 1M *($5 / $25 per 1M tok in/out)*<br>Claude Sonnet 5 · 1M *($1.20 / $7.50 per 1M tok)*<br>GPT-5.6 Terra · 1M *($2 / $14 per 1M tok)*<br>Gemini 3.6 Flash · 1M *($1.50 / $7.50 per 1M tok)* |
 
 ---
 
